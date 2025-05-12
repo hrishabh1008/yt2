@@ -1,10 +1,44 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import "./index.css";
+import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./components/HomePage";
+// import Header from "./components/Header";
+import Login from "./components/user/Login";
+import Register from "./components/user/Register";
+import ChannelLayout from "./components/channel/ChannelLayout";
+import WatchVideo from "./components/watch/WatchVideo";
+import AuthLayout from "./components/user/AuthLayout";
+import NotFound from "./components/NotFound";
 
-createRoot(document.getElementById('root')).render(
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <NotFound />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
+      {
+        path: "/watch",
+        children: [
+          { index: true, element: <WatchVideo /> },
+          // { path: ":city", element: <ConcertsCity /> },
+          // { path: "trending", element: <ConcertsTrending /> },
+        ],
+      },
+      {
+        path: "channel",
+        element: <ChannelLayout />,
+      },
+    ],
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={appRouter} />
+  </StrictMode>
+);
