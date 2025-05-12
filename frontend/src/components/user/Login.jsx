@@ -17,6 +17,11 @@ const Login = () => {
     navigate("/register");
   }
 
+  function directToHome(e) {
+    e.preventDefault();
+    navigate("/");
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#fff]">
       <form
@@ -26,6 +31,7 @@ const Login = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
           alt="YouTube"
           className="w-32 mx-auto mb-2"
+          onClick={directToHome}
         />
         <h2 className="text-center text-2xl font-semibold text-neutral-900">
           Sign in

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -24,6 +25,13 @@ const Register = () => {
     alert("Registered successfully!");
   };
 
+  const navigate = useNavigate();
+
+  function directToHome(e) {
+    e.preventDefault();
+    navigate("/");
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#fff]">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-neutral-200">
@@ -32,6 +40,7 @@ const Register = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
             alt="YouTube"
             className="w-32 mx-auto mb-2"
+            onClick={directToHome}
           />
 
           <h2 className="text-3xl font-bold text-neutral-900 mb-1">
