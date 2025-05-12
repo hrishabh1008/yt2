@@ -27,6 +27,11 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  function handleSignIn(e) {
+    e.preventDefault();
+    navigate("/register");
+  }
+
   function directToHome(e) {
     e.preventDefault();
     navigate("/");
@@ -111,6 +116,7 @@ const Register = () => {
           </div>
           {error && <div className="text-[#ff0000] mb-4 text-sm">{error}</div>}
           <button
+            onClick={handleSignIn}
             type="submit"
             className="w-full py-2 bg-[#ff0000] hover:bg-[#e60000] text-white rounded-lg font-semibold text-lg transition focus:outline-none focus:ring-2 focus:ring-[#ff0000] shadow-md">
             Sign Up
