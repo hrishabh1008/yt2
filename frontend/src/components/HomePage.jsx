@@ -24,7 +24,7 @@ const HomePage = () => {
       <Header onSearch={handleSearch} toggleSidebar={toggleSidebar} />
       <div className="flex flex-1 pt-16 overflow-hidden">
         <Sidebar isSidebarOpen={isSidebarOpen} />
-        <main className="flex-1 overflow-auto bg-gray-50 ml-0 md:ml-64 p-4">
+        <main className="flex-1 overflow-auto bg-gray-50 ml-0 p-4">
           <div className="max-w-7xl mx-auto">
             <Outlet />
           </div>

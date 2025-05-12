@@ -1,0 +1,76 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+// import { formatDistanceToNow } from "date-fns";
+
+const VideoThumbnail = ({ video }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/watch?v=${video.id}`);
+  };
+
+  // Format the view count
+  const formatViewCount = (count) => {
+    if (count >= 1000000) {
+      return `${(count / 1000000).toFixed(1)}M`;
+    } else if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}K`;
+    }
+    return count;
+  };
+
+  // Format the upload date
+  const formatUploadDate = (dateString) => {
+    try {
+      const date = new Date(dateString);
+      return formatDistanceToNow(date, { addSuffix: true });
+    } catch (error) {
+      return dateString;
+    }
+  };
+
+  return (
+    <div className="flex flex-col cursor-pointer mb-4" onClick={handleClick}>
+      {/* Thumbnail */}
+      <div className="relative">
+        <img
+          src={video.thumbnailUrl}
+          alt={video.title}
+          className="w-full h-auto rounded-lg object-cover"
+          style={{ aspectRatio: "16/9" }}
+        />
+        {video.duration && (
+          <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 py-0.5 rounded">
+            {video.duration}
+          </div>
+        )}
+      </div>
+
+      {/* Video details */}
+      <div className="flex mt-2">
+        {/* Channel avatar */}
+        <div className="flex-shrink-0 mr-2">
+          <img
+            src={video.channelAvatar || "/default-avatar.png"}
+            alt={video.channelName}
+            className="w-9 h-9 rounded-full"
+          />
+        </div>
+
+        {/* Title and metadata */}
+        <div className="flex-1">
+          <h3 className="text-sm font-medium line-clamp-2 text-gray-900">
+            {video.title}
+          </h3>
+          <p className="text-xs text-gray-600 mt-1">{video.channelName}</p>
+          <p className="text-xs text-gray-600">
+            {formatViewCount(video.views)} views •{" "}
+            {formatUploadDate(video.uploadDate)}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VideoThumbnail;
