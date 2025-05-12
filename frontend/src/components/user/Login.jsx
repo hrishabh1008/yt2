@@ -1,97 +1,73 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Handle sign in logic here
     alert(`Signed in as ${email}`);
   };
 
+  function handleCreateAccount(e) {
+    e.preventDefault();
+    navigate("/register");
+  }
+
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: '#f9f9f9'
-    }}>
+    <div className="min-h-screen flex items-center justify-center bg-[#fff]">
       <form
         onSubmit={handleSubmit}
-        style={{
-          background: '#fff',
-          padding: '2rem',
-          borderRadius: '8px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          width: '350px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1.5rem'
-        }}
-      >
+        className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm flex flex-col gap-6 border border-neutral-200">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
           alt="YouTube"
-          style={{ width: '120px', alignSelf: 'center' }}
+          className="w-32 mx-auto mb-2"
         />
-        <h2 style={{ textAlign: 'center', margin: 0 }}>Sign in</h2>
-        <p style={{ textAlign: 'center', color: '#606060', margin: 0 }}>
+        <h2 className="text-center text-2xl font-semibold text-neutral-900">
+          Sign in
+        </h2>
+        <p className="text-center text-neutral-500 mb-2">
           to continue to YouTube
         </p>
         <input
           type="email"
           placeholder="Email or phone"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
-          style={{
-            padding: '0.75rem',
-            borderRadius: '4px',
-            border: '1px solid #ccc',
-            fontSize: '1rem'
-          }}
+          className="px-4 py-3 rounded-lg border border-neutral-300 bg-neutral-100 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ff0000] text-base"
         />
         <input
           type="password"
           placeholder="Enter your password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
-          style={{
-            padding: '0.75rem',
-            borderRadius: '4px',
-            border: '1px solid #ccc',
-            fontSize: '1rem'
-          }}
+          className="px-4 py-3 rounded-lg border border-neutral-300 bg-neutral-100 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ff0000] text-base"
         />
         <button
           type="submit"
-          style={{
-            background: '#c4302b',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '4px',
-            padding: '0.75rem',
-            fontSize: '1rem',
-            cursor: 'pointer'
-          }}
-        >
+          className="bg-[#ff0000] hover:bg-[#e60000] text-white rounded-lg py-3 font-semibold text-base transition-colors shadow-md">
           Sign In
         </button>
-        <div style={{ textAlign: 'center', fontSize: '0.9rem' }}>
-          <a href="#" style={{ color: '#1a73e8', textDecoration: 'none' }}>
+        <div className="text-center text-sm">
+          <a href="#" className="text-[#ff0000] hover:underline">
             Forgot email?
           </a>
         </div>
-        <div style={{ textAlign: 'center', fontSize: '0.9rem' }}>
+        <div className="text-center text-xs text-neutral-400">
           Not your computer? Use Guest mode to sign in privately.
         </div>
-        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-          <a href="#" style={{ color: '#1a73e8', textDecoration: 'none' }}>
+        <div className="text-center mt-2">
+          <button
+            onClick={handleCreateAccount}
+            className="text-[#ff0000] hover:underline font-medium text-sm">
             Create account
-          </a>
+          </button>
         </div>
       </form>
     </div>
