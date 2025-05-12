@@ -20,18 +20,18 @@ const VideoThumbnail = ({ video }) => {
   };
 
   // Format the upload date
-  const formatUploadDate = (dateString) => {
-    try {
-      const date = new Date(dateString);
-      return formatDistanceToNow(date);
-    } catch (error) {
-      return dateString;
-    }
-  };
+  // const formatUploadDate = (dateString) => {
+  //   try {
+  //     const date = new Date(dateString);
+  //     return formatDistanceToNow(date);
+  //   } catch (error) {
+  //     return dateString;
+  //   }
+  // };
 
   return (
     <div
-      className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70"
+      className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102"
       onClick={handleClick}>
       {/* Thumbnail */}
       <div className="relative">
@@ -68,8 +68,7 @@ const VideoThumbnail = ({ video }) => {
             {video.Channel.channelName}
           </p>
           <p className="text-xs text-gray-600">
-            {formatViewCount(video.views)} views •{" "}
-            {formatUploadDate(video.uploadDate)}
+            {formatViewCount(video.views)} views • {video.uploadDate}
           </p>
         </div>
       </div>
