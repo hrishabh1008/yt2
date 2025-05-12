@@ -23,14 +23,16 @@ const VideoThumbnail = ({ video }) => {
   const formatUploadDate = (dateString) => {
     try {
       const date = new Date(dateString);
-      return formatDistanceToNow(date, { addSuffix: true });
+      return formatDistanceToNow(date);
     } catch (error) {
       return dateString;
     }
   };
 
   return (
-    <div className="flex flex-col cursor-pointer mb-4" onClick={handleClick}>
+    <div
+      className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70"
+      onClick={handleClick}>
       {/* Thumbnail */}
       <div className="relative">
         <img
@@ -51,7 +53,7 @@ const VideoThumbnail = ({ video }) => {
         {/* Channel avatar */}
         <div className="flex-shrink-0 mr-2">
           <img
-            src={video.channelAvatar || "/default-avatar.png"}
+            src={video.Channel.avatar || "/default-avatar.png"}
             alt={video.channelName}
             className="w-9 h-9 rounded-full"
           />
@@ -62,7 +64,9 @@ const VideoThumbnail = ({ video }) => {
           <h3 className="text-sm font-medium line-clamp-2 text-gray-900">
             {video.title}
           </h3>
-          <p className="text-xs text-gray-600 mt-1">{video.channelName}</p>
+          <p className="text-xs text-gray-600 mt-1">
+            {video.Channel.channelName}
+          </p>
           <p className="text-xs text-gray-600">
             {formatViewCount(video.views)} views •{" "}
             {formatUploadDate(video.uploadDate)}
