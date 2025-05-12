@@ -29,7 +29,7 @@ const Register = () => {
 
   function handleSignIn(e) {
     e.preventDefault();
-    navigate("/register");
+    navigate("/login");
   }
 
   function directToHome(e) {
@@ -44,7 +44,7 @@ const Register = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
             alt="YouTube"
-            className="w-32 mx-auto mb-2"
+            className="w-32 mx-auto mb-2  hover:drop-shadow-red-300 hover:drop-shadow-xs"
             onClick={directToHome}
           />
 
@@ -116,7 +116,6 @@ const Register = () => {
           </div>
           {error && <div className="text-[#ff0000] mb-4 text-sm">{error}</div>}
           <button
-            onClick={handleSignIn}
             type="submit"
             className="w-full py-2 bg-[#ff0000] hover:bg-[#e60000] text-white rounded-lg font-semibold text-lg transition focus:outline-none focus:ring-2 focus:ring-[#ff0000] shadow-md">
             Sign Up
@@ -124,11 +123,11 @@ const Register = () => {
         </form>
         <div className="text-center mt-6">
           <span className="text-neutral-500">Already have an account? </span>
-          <a
-            href="/login"
+          <button
+            onClick={handleSignIn}
             className="text-[#ff0000] hover:underline font-medium">
             Sign in
-          </a>
+          </button>
         </div>
       </div>
     </div>

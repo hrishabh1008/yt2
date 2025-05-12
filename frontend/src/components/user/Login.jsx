@@ -30,7 +30,7 @@ const Login = () => {
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
           alt="YouTube"
-          className="w-32 mx-auto mb-2"
+          className="w-32 mx-auto mb-2 hover:drop-shadow-red-300 hover:drop-shadow-xs"
           onClick={directToHome}
         />
         <h2 className="text-center text-2xl font-semibold text-neutral-900">

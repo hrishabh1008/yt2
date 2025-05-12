@@ -4,18 +4,20 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Header = ({ onSearch, toggleSidebar }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
-
+  // console.log(search);
   const handleInputChange = (e) => setSearch(e.target.value);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    if (onSearch) onSearch(search);
+    if (onSearch) {
+      onSearch(search);
+    }
   };
 
   const handleSignIn = () => {
-    navigate('/login');
+    navigate("/login");
   };
 
   return (
@@ -25,7 +27,6 @@ const Header = ({ onSearch, toggleSidebar }) => {
         onClick={toggleSidebar}
         aria-label="Toggle sidebar">
         <FaBars />
-        
       </button>
 
       <img
