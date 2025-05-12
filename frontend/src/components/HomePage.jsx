@@ -29,7 +29,16 @@ const HomePage = () => {
     setFilteredVideos(filteredOut);
   };
 
-  function handleFilterBtns() {}
+  const handleFilterBtns = (filterId) => {
+    if (filterId === "all") {
+      setFilteredVideos(videosData.videos);
+    } else {
+      const filteredOut = videosData.videos.filter((video) =>
+        video.genre.toLowerCase().includes(filterId.toLowerCase())
+      );
+      setFilteredVideos(filteredOut);
+    }
+  };
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);

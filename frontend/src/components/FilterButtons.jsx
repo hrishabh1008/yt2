@@ -7,6 +7,11 @@ const FilterButtons = ({ onFilterChange }) => {
 
   const filters = [
     { id: "all", label: "All" },
+    { id: "education", label: "Education" },
+    { id: "javascript", label: "Javascript" },
+    { id: "mern", label: "MERN" },
+    { id: "react", label: "React" },
+    { id: "web", label: "Web Development" },
     { id: "music", label: "Music" },
     { id: "gaming", label: "Gaming" },
     { id: "news", label: "News" },
