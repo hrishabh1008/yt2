@@ -17,7 +17,7 @@ const Sidebar = ({ isSidebarOpen }) => {
   return (
     // display the sidebar only when isSidebarOpen is true
     <aside
-      className={`bg-white border-r border-gray-200 h-full p-4 pt-6 transition-transform duration-200 z-20 shadow-lg ${
+      className={`bg-white border-r border-gray-200 h-full p-4 pt-6 transition-transform duration-200 z-20 shadow-lg max-md:hidden ${
         isSidebarOpen ? "translate-x-0 w-64 " : "-translate-x-full w-0"
       } fixed md:static flex flex-col`}
       //show nav links only when isSidebarOpen is true
