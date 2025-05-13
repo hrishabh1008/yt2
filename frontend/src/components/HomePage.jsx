@@ -15,18 +15,16 @@ const HomePage = () => {
 
   const handleSearch = (searchQuery) => {
     console.log(searchQuery);
-    // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-    const filteredOut = filteredVideos.filter(
-      (video) =>
-        video.genre.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        video.Channel.channelName
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase()) ||
-        video.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        video.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    console.log(filteredOut);
-    setFilteredVideos(filteredOut);
+    // // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+    // const filteredOut = filteredVideos.filter((video) => {
+    //   const lowerQuery = searchQuery.toLowerCase();
+    //   return (
+    //     video.genre?.toLowerCase().includes(lowerQuery) ||
+    //     video.title?.toLowerCase().includes(lowerQuery)
+    //   );
+    // });
+    // console.log(filteredOut);
+    // setFilteredVideos(filteredOut);
   };
 
   const handleFilterBtns = (filterId) => {

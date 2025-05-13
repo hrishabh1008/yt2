@@ -29,15 +29,17 @@ const Header = ({ onSearch, toggleSidebar }) => {
         <FaBars />
       </button>
 
-      <img
-        src="/Youtube.png"
-        alt="YouTube Logo"
-        width={20}
-        height={20}
-        className="h-8 w-auto cursor-pointer mr-6 select-none"
-        onClick={() => navigate("/")}
-        draggable="false"
-      />
+      <a href="/">
+        <img
+          src="/Youtube.png"
+          alt="YouTube Logo"
+          width={20}
+          height={20}
+          className="h-8 w-auto cursor-pointer mr-6 select-none"
+          onClick={() => navigate("/")}
+          draggable="false"
+        />
+      </a>
 
       {/* Search Input Bar with search button */}
       <form
