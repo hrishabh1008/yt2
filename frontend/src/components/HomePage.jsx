@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import FilterButtons from "./FilterButtons";
 import VideoThumbnail from "./VideoThumbnail";
 
@@ -10,21 +10,27 @@ import videosData from "../public/videosData.json";
 
 const HomePage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [filteredVideos, setFilteredVideos] = useState(videosData.videos);
+  // const [searchedVideo, setSearchedVideo] = useState(videosData.videos);
 
   const handleSearch = (searchQuery) => {
     console.log(searchQuery);
-    // // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-    // const filteredOut = filteredVideos.filter((video) => {
-    //   const lowerQuery = searchQuery.toLowerCase();
-    //   return (
-    //     video.genre?.toLowerCase().includes(lowerQuery) ||
-    //     video.title?.toLowerCase().includes(lowerQuery)
-    //   );
-    // });
-    // console.log(filteredOut);
-    // setFilteredVideos(filteredOut);
+    // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+    const lowerQuery = searchQuery.toLowerCase();
+
+    if (searchQuery == "") {
+      setFilteredVideos(videosData.videos);
+    }
+    const searchedVid = videosData.videos.filter((video) => {
+      return (
+        video.genre?.toLowerCase().includes(lowerQuery) ||
+        video.title?.toLowerCase().includes(lowerQuery)
+      );
+    });
+    console.log(searchedVid);
+    // setSearchedVideo(searchedVid);
+    setFilteredVideos(searchedVid);
   };
 
   const handleFilterBtns = (filterId) => {
