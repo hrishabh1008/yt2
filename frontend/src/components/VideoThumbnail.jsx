@@ -1,12 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { formatDistanceToNow } from "date-fns";
 
 const VideoThumbnail = ({ video }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/watch?v=${video.id}`);
+    navigate(`/watch/${video._id}`);
   };
 
   // Format the view count
@@ -34,19 +34,21 @@ const VideoThumbnail = ({ video }) => {
       className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102"
       onClick={handleClick}>
       {/* Thumbnail */}
-      <div className="relative">
-        <img
-          src={video.thumbnailUrl}
-          alt={video.title}
-          className="w-full h-auto rounded-lg object-cover"
-          style={{ aspectRatio: "16/9" }}
-        />
-        {video.duration && (
-          <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 py-0.5 rounded">
-            {video.duration}
-          </div>
-        )}
-      </div>
+      <Link to={`watch/${video._id}`}>
+        <div className="relative">
+          <img
+            src={video.thumbnailUrl}
+            alt={video.title}
+            className="w-full h-auto rounded-lg object-cover"
+            style={{ aspectRatio: "16/9" }}
+          />
+          {video.duration && (
+            <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 py-0.5 rounded">
+              {video.duration}
+            </div>
+          )}
+        </div>
+      </Link>
 
       {/* Video details */}
       <div className="flex mt-2">

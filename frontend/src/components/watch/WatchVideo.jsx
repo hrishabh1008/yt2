@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import videosData from "../../public/videosData.json";
+import videosData from "../../utils/videosData.json";
 
 const WatchVideo = () => {
   const { id } = useParams();

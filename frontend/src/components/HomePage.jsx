@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import FilterButtons from "./FilterButtons";
 import VideoThumbnail from "./VideoThumbnail";
 
-import videosData from "../public/videosData.json";
+import videosData from "../utils/videosData.json";
 // const videos = videosData.videos;
 
 const HomePage = () => {
@@ -15,7 +15,7 @@ const HomePage = () => {
   // const [searchedVideo, setSearchedVideo] = useState(videosData.videos);
 
   const handleSearch = (searchQuery) => {
-    console.log(searchQuery);
+    // console.log(searchQuery);
     // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
     const lowerQuery = searchQuery.toLowerCase();
 
@@ -28,7 +28,7 @@ const HomePage = () => {
         video.title?.toLowerCase().includes(lowerQuery)
       );
     });
-    console.log(searchedVid);
+    // console.log(searchedVid);
     // setSearchedVideo(searchedVid);
     setFilteredVideos(searchedVid);
   };

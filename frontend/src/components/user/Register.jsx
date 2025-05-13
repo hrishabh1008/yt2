@@ -3,15 +3,21 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [form, setForm] = useState({
-    username: "",
-    email: "",
-    password: "",
+    userName: "",
+    userEmail: "",
+    userPassword: "",
     confirmPassword: "",
   });
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm((prevForm) => {
+      const updatedForm = { ...prevForm, [e.target.name]: e.target.value };
+      console.log(updatedForm);
+      return updatedForm;
+    });
+    console.log(form);
     setError("");
   };
 
@@ -23,9 +29,8 @@ const Register = () => {
     }
     // Submit logic here (e.g., API call)
     alert("Registered successfully!");
+    navigate("/login");
   };
-
-  const navigate = useNavigate();
 
   function handleSignIn(e) {
     e.preventDefault();
@@ -60,8 +65,8 @@ const Register = () => {
             </label>
             <input
               type="text"
-              name="username"
-              value={form.username}
+              name="userName"
+              value={form.userName}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 bg-neutral-100 text-neutral-900 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff0000] placeholder-neutral-400"
@@ -75,8 +80,8 @@ const Register = () => {
             </label>
             <input
               type="email"
-              name="email"
-              value={form.email}
+              name="userEmail"
+              value={form.userEmail}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 bg-neutral-100 text-neutral-900 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff0000] placeholder-neutral-400"
@@ -90,8 +95,8 @@ const Register = () => {
             </label>
             <input
               type="password"
-              name="password"
-              value={form.password}
+              name="userPassword"
+              value={form.userPassword}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 bg-neutral-100 text-neutral-900 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff0000] placeholder-neutral-400"

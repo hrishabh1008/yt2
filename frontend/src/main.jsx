@@ -4,12 +4,10 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/HomePage";
-// import Header from "./components/Header";
 import Login from "./components/user/Login";
 import Register from "./components/user/Register";
 import ChannelLayout from "./components/channel/ChannelLayout";
 import WatchVideo from "./components/watch/WatchVideo";
-import AuthLayout from "./components/user/AuthLayout";
 import NotFound from "./components/NotFound";
 
 const appRouter = createBrowserRouter([
@@ -22,7 +20,7 @@ const appRouter = createBrowserRouter([
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
       {
-        path: "/watch",
+        path: "/watch/:id",
         children: [
           { index: true, element: <WatchVideo /> },
           // { path: ":city", element: <ConcertsCity /> },
