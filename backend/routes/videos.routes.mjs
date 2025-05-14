@@ -2,6 +2,7 @@ import {
   getAllVideos,
   getVideoById,
   searchVideos,
+  uploadVideos,
 } from "../controller/videos.controller.mjs";
 
 function videosRouter(app) {
