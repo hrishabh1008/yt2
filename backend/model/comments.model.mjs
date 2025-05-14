@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 const commentSchema = new mongoose.Schema(
   {
-    user: {
+    userName: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'userModel', // Reference to User model
+      ref: "userModel", // Reference to User model
       required: true,
     },
     content: {

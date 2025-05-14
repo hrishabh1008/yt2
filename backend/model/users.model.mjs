@@ -17,9 +17,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true, // userPassword is required (typo: should be 'required')
     },
-    userChannel: {
+    channelName: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "channelModel",//reference to channel Model
+      ref: "channelModel", //reference to channel Model
     },
   },
   { timestamps: true }
