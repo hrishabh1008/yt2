@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { signinUser } from "./userAuth.Service";
+import { useContext } from "react";
+import { userContext } from "../../utils/context/usersContext";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const { signIn } = useContext(userContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,11 +17,19 @@ const Login = () => {
       userEmail: email,
       userPassword: password,
     };
-    const response = await signinUser(userData);
-    // console.log(response);
-    response.status == 200
-      ? alert(`Signed in as ${email}`)
-      : alert("Unable to login- check console");
+    try {
+      const response = await signinUser(userData);
+      console.log(response);
+      if (response && response.data.token && response.data.user) {
+        signIn(response.data.user, response.data.token); // updating userContext
+        alert(`Signed in as ${email}`);
+        navigate("/");
+      } else {
+        alert("Unable to login - check credentials");
+      }
+    } catch (err) {
+      alert(err.message || "Unable to login - check credentials");
+    }
   };
 
   function handleCreateAccount(e) {

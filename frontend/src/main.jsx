@@ -10,6 +10,7 @@ import ChannelLayout from "./components/channel/ChannelLayout";
 import WatchVideo from "./components/watch/WatchVideo";
 import NotFound from "./components/NotFound";
 import WatchPageLayout from "./components/watch/WatchPageLayout";
+import { UserProvider } from "./utils/context/usersContext";
 
 const appRouter = createBrowserRouter([
   {
@@ -34,6 +35,8 @@ const appRouter = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={appRouter} />
+    <UserProvider>
+      <RouterProvider router={appRouter} />
+    </UserProvider>
   </StrictMode>
 );
