@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt"; // Import bcrypt for password hashing and comparison
-import userModel from "../model/user.model.mjs"; // Import the user model for database operations
+import userModel from "../model/users.model.mjs"; // Import the user model for database operations
 
 /**
  * Middleware to encrypt the user's password before saving it to the database.

@@ -1,5 +1,5 @@
 // Import controller functions for user operations
-import { addUser, loginUser } from "../controller/user.controller.mjs";
+import { addUser, loginUser } from "../controller/users.controller.mjs";
 // Import middleware for password encryption and decryption
 import {
   decryptUserPassword,

@@ -1,6 +1,6 @@
 import express, { json, urlencoded } from 'express'
 import mongoose from 'mongoose';
-import { userRouter } from './routes/user.routes.mjs';
+import { userRouter } from "./routes/users.routes.mjs";
 import { configDotenv } from "dotenv";
 
 

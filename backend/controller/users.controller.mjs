@@ -1,5 +1,5 @@
 // Importing the user model to interact with the database
-import userModel from "../model/user.model.mjs";
+import userModel from "../model/users.model.mjs";
 
 // Importing utility function to generate authentication tokens
 import { setUserAuthentication } from "../utils/Tgenerator.mjs";

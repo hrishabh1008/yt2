@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true, // userPassword is required (typo: should be 'required')
     },
+    userChannel: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "channelModel",//reference to channel Model
+    },
   },
   { timestamps: true }
 ); // Automatically add createdAt and updatedAt fields
