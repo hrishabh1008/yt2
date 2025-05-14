@@ -1,14 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import multiavatar from "@multiavatar/multiavatar/esm";
 // import { formatDistanceToNow } from "date-fns";
 
 const VideoThumbnail = ({ video }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // const avatarContainer = useRef(null);
-  const handleClick = () => {
-    navigate(`/watch/${video._id}`);
-  };
+  // const handleClick = () => {
+  //   navigate(`watch/${video._id}`);
+  // };
 
   const svgCode = (str) => {
     if (str) {
@@ -40,11 +40,9 @@ const VideoThumbnail = ({ video }) => {
   // };
 
   return (
-    <div
-      className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102"
-      onClick={handleClick}>
-      {/* Thumbnail */}
-      <Link to={`watch/${video._id}`}>
+    <Link to={`watch/${video._id}`}>
+      <div className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102">
+        {/* // onClick={handleClick}>Thumbnail */}
         <div className="relative">
           <img
             src={video.thumbnailUrl}
@@ -58,39 +56,38 @@ const VideoThumbnail = ({ video }) => {
             </div>
           )}
         </div>
-      </Link>
-
-      {/* Video details */}
-      <div className="flex mt-2">
-        {/* Channel avatar */}
-        {/* Channel avatar */}
-        <div className="flex-shrink-0 mr-2">
-          <div
-            className="w-9 h-9 rounded-full overflow-hidden"
-            dangerouslySetInnerHTML={{
-              __html: svgCode(video.title || "default"),
-            }}
-          />
-          {/* <img
+        {/* Video details */}
+        <div className="flex mt-2">
+          {/* Channel avatar */}
+          {/* Channel avatar */}
+          <div className="flex-shrink-0 mr-2">
+            <div
+              className="w-9 h-9 rounded-full overflow-hidden"
+              dangerouslySetInnerHTML={{
+                __html: svgCode(video.title || "default"),
+              }}
+            />
+            {/* <img
             src={avatarSvg || "/default-avatar.png"}
             alt={video.channelName}
             className="w-9 h-9 rounded-full"
           /> */}
-        </div>
-        {/* Title and metadata */}
-        <div className="flex-1">
-          <h3 className="text-sm font-medium line-clamp-2 text-gray-900">
-            {video.title}
-          </h3>
-          <p className="text-xs text-gray-600 mt-1">
-            {video.Channel.channelName}
-          </p>
-          <p className="text-xs text-gray-600">
-            {formatViewCount(video.views)} views • {video.uploadDate}
-          </p>
+          </div>
+          {/* Title and metadata */}
+          <div className="flex-1">
+            <h3 className="text-sm font-medium line-clamp-2 text-gray-900">
+              {video.title}
+            </h3>
+            <p className="text-xs text-gray-600 mt-1">
+              {video.Channel.channelName}
+            </p>
+            <p className="text-xs text-gray-600">
+              {formatViewCount(video.views)} views • {video.uploadDate}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
