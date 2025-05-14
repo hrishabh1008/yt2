@@ -57,7 +57,7 @@ export async function addUser(req, res) {
 export async function loginUser(req, res) {
   console.log(req);
   try {
-    // Extracting user details from the request object (assumes middleware has set req.user)
+    // Extracting user details from the request object (assumes middleware has set req.user after verifying the token)
     const user = {
       id: req.user._id,
       userName: req.user.userName,

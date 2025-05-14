@@ -4,29 +4,32 @@ import { commentContext } from "../../utils/context/commentsContext.js";
 import multiavatar from "@multiavatar/multiavatar/esm";
 
 
-const CommentSection = ({ comments, videoId, currentUser, onCommentsChanged, videoTitle}) => {
-  
-    const svgCode = (str) => {
-      if (str) {
-        return multiavatar(str);
-      } else {
-        return multiavatar("ravi");
-      }
-    };
+const CommentSection = ({
+  comments,
+  videoId,
+  currentUser,
+  onCommentsChanged,
+  videoTitle,
+}) => {
+  const svgCode = (str) => {
+    if (str) {
+      return multiavatar(str);
+    } else {
+      return multiavatar("ravi");
+    }
+  };
 
-console.log(svgCode("ravi"))
-
+  // console.log(svgCode("ravi"))
 
   const [newComment, setNewComment] = useState("");
   const [editingId, setEditingId] = useState(null);
   const [editContent, setEditContent] = useState("");
 
-  console.log(comments);
+  //   console.log(comments);
 
-    const commentApiServices = useContext(commentContext);
-    // console.log(commentApiServices)
-    
-    
+  const commentApiServices = useContext(commentContext);
+  // console.log(commentApiServices)
+
   const handleCommentPost = async () => {
     if (!newComment.trim()) return;
     console.log("handleCommentPost called");
@@ -63,8 +66,9 @@ console.log(svgCode("ravi"))
       {/* New Comment Input */}
       <div className="flex items-start space-x-4 mb-6">
         <div
-          className="w-10 h-10 rounded-full" dangerouslySetInnerHTML={{ __html: svgCode(videoTitle) }}></div>
-              {/* <img
+          className="w-10 h-10 rounded-full"
+          dangerouslySetInnerHTML={{ __html: svgCode(videoTitle) }}></div>
+        {/* <img
           src={currentUser?.avatar || "
           https:alt="User" //example.com/default-avatar.png"}
           className="w-10 h-10 rounded-full"

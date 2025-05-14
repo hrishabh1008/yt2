@@ -1,134 +1,131 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+// import { getVideoById, getAllVideos } from "../services/video.service";
+import VideoPlayerCard from "./VideoPlayerCard";
+// import CommentSection from "../components/video/CommentSection";
+// import SuggestedVideos from "../components/video/SuggestedVideo";
+// import { useAuth } from "../context/AuthContext";
+import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
+import { PiShareFatLight } from "react-icons/pi";
+import { GoDownload } from "react-icons/go";
 import videosData from "../../utils/videosData.json";
-
-const WatchVideo = () => {
+const VideoPlayerPage = () => {
   const { id } = useParams();
+  const [video, setVideo] = useState(null);
 
-  const video = videosData.videos.find((vid) => vid._id === id);
+  const currentVideo = videosData.videos.filter((video) => video._id === id);
+  setVideo(currentVideo);
 
-  // Dummy data for demonstration if no video prop is passed
-  const defaultVideo = {
-    videoUrl: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
-    title: "Sample Video",
-    description: "This is a sample video description.",
-    channel: "Sample Channel",
-    likes: 120,
-    dislikes: 5,
-    comments: [
-      { _id: 1, user: "Alice", text: "Great video!" },
-      { _id: 2, user: "Bob", text: "Very informative." },
-    ],
-  };
+  // const [suggestedVideos, setSuggestedVideos] = useState([]);
+  // const { user: authUser } = useAuth();
 
-  const vid = video || defaultVideo;
-
-  // Extract YouTube video ID from URL
-  // const getYouTubeId = (url) => {
-  //   const regExp =
-  //     /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-  //   const match = url.match(regExp);
-  //   return match && match[2].length === 11 ? match[2] : null;
+  // const fetchVideo = async () => {
+  //   const data = await getVideoById(id);
+  //   // console.log(data);
+  //   setVideo(data);
   // };
 
-  // const videoUrl = getYouTubeId(vid.videoUrl || vid.videoUrl);
+  // const fetchSuggestedVideos = async () => {
+  //   const data = await getAllVideos();
+  //   // console.log(data);
+  //   // Exclude current video
+  //   const filtered = data.filter((v) => v._id !== id);
+  //   setSuggestedVideos(filtered);
+  // };
 
-  const [likes, setLikes] = useState(vid.likes);
-  const [dislikes, setDislikes] = useState(vid.dislikes);
-  const [comments, setComments] = useState(vid.comments);
-  const [commentInput, setCommentInput] = useState("");
+  // useEffect(() => {
+  //   fetchVideo();
+  //   fetchSuggestedVideos();
+  // }, [id]);
 
-  const handleLike = () => setLikes((l) => l + 1);
-  const handleDislike = () => setDislikes((d) => d + 1);
-
-  const handleCommentSubmit = (e) => {
-    e.preventDefault();
-    if (commentInput.trim()) {
-      setComments([
-        ...comments,
-        { id: Date.now(), user: "You", text: commentInput },
-      ]);
-      setCommentInput("");
-    }
-  };
+  if (!video) return <div className="p-8">Loading...</div>;
 
   return (
-    <div className="max-w-3xl mx-auto mt-8 mb-8 p-6 bg-white rounded-xl shadow-lg font-sans">
-      {/* Video Player */}
-      <div className="w-full aspect-video bg-black rounded-lg overflow-hidden mb-6">
-        {video.videoUrl ? (
-          <iframe
-            className="w-full h-full"
-            src={video.videoUrl}
-            title={vid.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen></iframe>
-        ) : (
-          <video className="w-full h-full" controls>
-            <source src={vid.videoUrl} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+    <div className="flex p-4 space-x-6">
+      {/* Left Side */}
+      <div className="flex-1">
+        <VideoPlayerCard videoUrl={video.videoUrl} />
+        <h2 className="text-xl font-bold mt-4">{video.title}</h2>
+
+        {/* Meta Info: Views + Upload Date */}
+        {/* <p className="text-sm text-gray-500 mb-3">
+          {video.views.toLocaleString()} views •{" "}
+          {new Date(video.uploadDate).toLocaleDateString()}
+        </p> */}
+
+        {/* Channel + Action Buttons */}
+        <div className="flex justify-between items-start mb-4">
+          {/* Channel Info */}
+          <div className="flex items-center space-x-4">
+            <img
+              // src={video.channel.avatar}
+              // alt={video.channel.channelName}
+              className="w-12 h-12 rounded-full"
+            />
+            <div>
+              {/* <h4 className="font-semibold">{video.channel.channelName}</h4> */}
+              <p className="text-sm text-gray-500">
+                {video.subscriberCount.toLocaleString()} subscribers
+              </p>
+            </div>
+            <button className="ml-4 bg-black text-white px-4 py-1.5 rounded-full font-semibold hover:bg-red-700">
+              Subscribe
+            </button>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex items-center space-x-3">
+            <button className="bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 text-sm flex items-center space-x-1">
+              <span>
+                <AiOutlineLike />
+              </span>{" "}
+              <span>{video.likes.toLocaleString()}</span>
+            </button>
+            <button className="bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 text-sm flex items-center space-x-1">
+              <span>
+                <AiOutlineDislike />
+              </span>{" "}
+              <span>{video.dislikes.toLocaleString()}</span>
+            </button>
+            <button className="bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 text-sm flex items-center space-x-1">
+              <span>
+                <PiShareFatLight />
+              </span>{" "}
+              <span>Share</span>
+            </button>
+            <button className="bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 text-sm flex items-center space-x-1">
+              <span>
+                <GoDownload />
+              </span>{" "}
+              <span>Download</span>
+            </button>
+            <button className="bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 text-sm">
+              ...
+            </button>
+          </div>
+        </div>
+
+        {/* Video Description */}
+        <p className="text-sm text-gray-800 mb-6 whitespace-pre-line">
+          {video.description}
+        </p>
+
+        {/* Comments */}
+        {/* <CommentSection comments={video.comments} /> */}
+        {/* <CommentSection
+          comments={video.comments}
+          videoId={video._id}
+          currentUser={authUser}
+          onCommentsChanged={fetchVideo}
+        /> */}
       </div>
 
-      {/* Title and Description */}
-      <h2 className="mb-2 font-medium text-2xl text-neutral-900">
-        {vid.title}
-      </h2>
-      <div className="text-neutral-600 text-base mb-4">{vid.description}</div>
-
-      {/* Channel Name */}
-      <div className="font-medium text-neutral-900 mb-5 text-sm">
-        Channel: {vid.channel}
-      </div>
-
-      {/* Like and Dislike Buttons */}
-      <div className="mb-7 flex gap-3">
-        <button
-          onClick={handleLike}
-          className="bg-neutral-100 hover:bg-neutral-200 border-none rounded-full px-5 py-2 text-base cursor-pointer text-neutral-900 font-medium transition">
-          👍 {likes}
-        </button>
-        <button
-          onClick={handleDislike}
-          className="bg-neutral-100 hover:bg-neutral-200 border-none rounded-full px-5 py-2 text-base cursor-pointer text-neutral-900 font-medium transition">
-          👎 {dislikes}
-        </button>
-      </div>
-
-      {/* Comment Section */}
-      <div>
-        <h3 className="text-lg font-medium text-neutral-900 mb-3">Comments</h3>
-        <form
-          onSubmit={handleCommentSubmit}
-          className="mb-4 flex gap-2 items-center">
-          <input
-            type="text"
-            value={commentInput}
-            onChange={(e) => setCommentInput(e.target.value)}
-            placeholder="Add a comment..."
-            className="flex-1 px-4 py-2 rounded-full border border-neutral-200 text-sm bg-neutral-50 outline-none focus:border-blue-400"
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white border-none rounded-full px-5 py-2 font-medium text-sm cursor-pointer transition">
-            Post
-          </button>
-        </form>
-        <ul className="list-none p-0">
-          {comments.map((c) => (
-            <li
-              key={c.id || c._id}
-              className="mb-3 py-2 border-b border-neutral-100">
-              <strong className="text-neutral-900">{c.user}:</strong>{" "}
-              <span className="text-neutral-800">{c.text || c.content}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Right Side: Suggested */}
+      {/* <div className="w-[400px]">
+        <SuggestedVideos videos={suggestedVideos} />
+      </div> */}
     </div>
   );
 };
 
-export default WatchVideo;
+export default VideoPlayerPage;

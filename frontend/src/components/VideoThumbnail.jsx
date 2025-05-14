@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import multiavatar from "@multiavatar/multiavatar/esm";
 // import { formatDistanceToNow } from "date-fns";
 
-const VideoThumbnail = ({ video }) => {
-  // const navigate = useNavigate();
+const VideoThumbnail = ({ video, className }) => {
+  const navigate = useNavigate();
 
   // const avatarContainer = useRef(null);
-  // const handleClick = () => {
-  //   navigate(`watch/${video._id}`);
-  // };
+  const handleClick = () => {
+    navigate(`watch/${video._id}`);
+  };
 
   const svgCode = (str) => {
     if (str) {
@@ -40,9 +40,12 @@ const VideoThumbnail = ({ video }) => {
   // };
 
   return (
-    <div className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102">
-      <Link to={`watch/${video._id}`}>
-        {/* // onClick={handleClick}>Thumbnail */}
+    <div
+      onClick={handleClick}
+      className={`flex flex-col cursor-pointer mb-4 w-80 ${
+        className ? className : "xl:w-1/4"
+      }  h-70 hover:scale-102`}>
+      <Link>
         <div className="relative">
           <img
             src={video.thumbnailUrl}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const VideoPlayerCard = ({ videoUrl }) => {
-  console.log(videoUrl);
+  // console.log(videoUrl);
   const videoId = new URL(videoUrl).searchParams.get("v");
 
   return (
