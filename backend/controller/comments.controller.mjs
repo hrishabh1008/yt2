@@ -38,14 +38,13 @@ export const editCommentById = async (req, res) => {
   try {
     const { id } = req.params;
     const { content } = req.body;
+    //find the required comment by id and update the content
+    const updated = await commentModel
+      .findByIdAndUpdate(id, { content }, { new: true })
+      .populate("userName", "userName userAvatar");
 
-    const updated = await commentModel.findByIdAndUpdate(
-      id,
-      { content },
-      { new: true }
-    ).populate("userName", "userName userAvatar");
-
-    if (!updated) return res.status(404).json({ error: "commentModel not found" });
+    if (!updated)
+      return res.status(404).json({ error: "commentModel not found" });
 
     res.status(200).json(updated);
   } catch (err) {
@@ -60,7 +59,8 @@ export const deleteCommentById = async (req, res) => {
 
     // #1. Find the comment first
     const comment = await commentModel.findById(id);
-    if (!comment) return res.status(404).json({ error: "commentModel not found" });
+    if (!comment)
+      return res.status(404).json({ error: "commentModel not found" });
 
     // #2. Remove it from associated video's comment array
     await videoModel.updateMany({ comments: id }, { $pull: { comments: id } });
@@ -81,13 +81,17 @@ export const getAllComments = async (req, res) => {
 
     let comments;
     if (videoId) {
+      //find the video document with the required id along with populated comments data
       const video = await videoModel.findById(videoId).populate({
         path: "comments",
         populate: { path: "userName", select: "userName userAvatar" },
       });
+      //store in the comment variable declared earlier
       comments = video?.comments || [];
     } else {
-      comments = await commentModel.find().populate("userName", "userName userAvatar");
+      comments = await commentModel
+        .find()
+        .populate("userName", "userName userAvatar");
     }
 
     res.status(200).json(comments);
