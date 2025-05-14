@@ -2,9 +2,9 @@ import express, { json, urlencoded } from 'express'
 import mongoose from 'mongoose';
 import { userRouter } from "./routes/users.routes.mjs";
 import { configDotenv } from "dotenv";
-
-
-
+import channelsRouter from "./routes/channels.routes.mjs";
+import videosRouter from "./routes/videos.routes.mjs";
+import commentsRouter from "./routes/comments.routes.mjs";
 
 const config = configDotenv();
 const atlasURI = config.parsed.MONGODB_ATLAS_URI;
@@ -24,7 +24,12 @@ app.listen(PORT || 5000, () => {
 
 app.use(json());
 app.use(urlencoded());
+
+//Application routers
 userRouter(app);
+channelsRouter(app);
+videosRouter(app);
+commentsRouter(app);
 
 if (atlasURI) {
   mongoose
