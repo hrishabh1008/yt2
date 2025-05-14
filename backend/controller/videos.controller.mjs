@@ -58,3 +58,30 @@ export const searchVideos = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+
+
+
+// export const uploadVideos = async (req, res) => {
+//   try {
+//     const {
+//       title,
+//       videoUrl,
+//       thumbnailUrl,
+//       description,
+//       channelName,
+//       views,
+//       likes,
+//       dislikes,
+//       uploadDate,
+//       subscriberCount,
+//       comments,
+//     } = req.body;
+//     const videoArray = req.body;
+
+//     const inserted = await videoModel.insertMany(videoArray);
+//     inserted ? console.log("success") : console.log("failed");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };

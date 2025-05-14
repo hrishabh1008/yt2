@@ -5,9 +5,10 @@ import {
 } from "../controller/videos.controller.mjs";
 
 function videosRouter(app) {
-  app.get("/", getAllVideos);
-  app.get("/search", searchVideos); // ?title=react&category=web
-  app.get("/:id", getVideoById);
+  app.get("/api/videos", getAllVideos);
+  app.get("/api/videos/search", searchVideos); // ?title=react&category=web
+  app.get("/api/videos/:id", getVideoById);
+  // app.post("/vid", uploadVideos);
 }
 
 export default videosRouter;
