@@ -368,6 +368,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "11.2M Views",
       "uploadDate": "4 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment, gaming"
     },
     {
@@ -378,6 +400,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "10.2M Views",
       "uploadDate": "6 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment, live"
     },
     {
@@ -388,6 +432,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "7.2M Views",
       "uploadDate": "10 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment, sports"
     },
     {
@@ -398,6 +464,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1.2M Views",
       "uploadDate": "2 days ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "education"
     },
     {
@@ -408,6 +496,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "30.2M Views",
       "uploadDate": "2 months ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment, music"
     },
     {
@@ -418,6 +528,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "100K Views",
       "uploadDate": "3 months ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "education"
     },
     {
@@ -428,6 +560,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "140K Views",
       "uploadDate": "3 months ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "education, web"
     },
     {
@@ -438,6 +592,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "140M Views",
       "uploadDate": "3 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "songs, live, fashion, beauty"
     },
     {
@@ -448,6 +624,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "10M Views",
       "uploadDate": "18 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment, gaming"
     },
     {
@@ -458,6 +656,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "education, learning"
     },
     {
@@ -468,6 +688,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "education, learning"
     },
     {
@@ -478,6 +720,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "news"
     },
     {
@@ -488,6 +752,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "4M Views",
       "uploadDate": "12 days ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "news"
     },
     {
@@ -498,6 +784,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "education, learning"
     },
     {
@@ -508,6 +816,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "songs"
     },
     {
@@ -518,6 +848,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1.4M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment"
     },
     {
@@ -528,6 +880,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "1.9M Views",
       "uploadDate": "2 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "songs"
     },
     {
@@ -538,6 +912,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "3.9M Views",
       "uploadDate": "12 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "songs"
     },
     {
@@ -548,6 +944,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "3.4M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "comedy"
     },
     {
@@ -558,6 +976,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "5.9M Views",
       "uploadDate": "12 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "entertainment"
     },
     {
@@ -568,6 +1008,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "5.9M Views",
       "uploadDate": "12 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "sports"
     },
     {
@@ -578,6 +1040,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "5M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "comedy"
     },
     {
@@ -588,6 +1072,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "3M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "comedy"
     },
     {
@@ -598,6 +1104,28 @@
       "Channel": { "channelName": "Hemant Jangir" },
       "views": "3M Views",
       "uploadDate": "1 years ago",
+      "comments": [
+        {
+          "_id": "comment01",
+          "user": {
+            "_id": "user02",
+            "username": "WebDevMaster",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
+          },
+          "content": "This was super helpful! I've been trying to learn React for a while now and this really cleared things up.",
+          "createdAt": "2023-09-21T08:30:00Z"
+        },
+        {
+          "_id": "comment02",
+          "user": {
+            "_id": "user03",
+            "username": "CodeNinja",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
+          },
+          "content": "Great explanation of state and props. Could you do a follow-up on hooks?",
+          "createdAt": "2023-09-22T12:15:00Z"
+        }
+      ],
       "genre": "news"
     }
   ]
