@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "channelModel", //reference to channel Model
     },
+    userAvatar: {
+      type: String,
+      default: "https://example.com/default-avatar.png",
+    },
   },
   { timestamps: true }
 ); // Automatically add createdAt and updatedAt fields
