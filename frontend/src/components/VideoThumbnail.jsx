@@ -1,14 +1,24 @@
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import multiavatar from "@multiavatar/multiavatar/esm";
 // import { formatDistanceToNow } from "date-fns";
 
 const VideoThumbnail = ({ video }) => {
   const navigate = useNavigate();
 
+  // const avatarContainer = useRef(null);
   const handleClick = () => {
     navigate(`/watch/${video._id}`);
   };
 
+  const svgCode = (str) => {
+    if (str) {
+      return multiavatar(str);
+    } else {
+      return multiavatar("ravi");
+    }
+  };
+  // let avatarSvg = multiavatar(svgCode);
+  // console.log(avatarSvg);
   // Format the view count
   const formatViewCount = (count) => {
     if (count >= 1000000) {
@@ -53,14 +63,20 @@ const VideoThumbnail = ({ video }) => {
       {/* Video details */}
       <div className="flex mt-2">
         {/* Channel avatar */}
+        {/* Channel avatar */}
         <div className="flex-shrink-0 mr-2">
-          <img
-            src={video.Channel.avatar || "/default-avatar.png"}
+          <div
+            className="w-9 h-9 rounded-full overflow-hidden"
+            dangerouslySetInnerHTML={{
+              __html: svgCode(video.title || "default"),
+            }}
+          />
+          {/* <img
+            src={avatarSvg || "/default-avatar.png"}
             alt={video.channelName}
             className="w-9 h-9 rounded-full"
-          />
+          /> */}
         </div>
-
         {/* Title and metadata */}
         <div className="flex-1">
           <h3 className="text-sm font-medium line-clamp-2 text-gray-900">
