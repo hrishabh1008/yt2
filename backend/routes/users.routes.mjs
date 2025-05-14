@@ -9,8 +9,8 @@ import {
 // Define user-related routes
 export function userRouter(app) {
   // Route to add a new user, encrypts password before calling addUser controller
-  app.post("/register", encryptUserPassword, addUser);
+  app.post("/api/auth/register", encryptUserPassword, addUser);
 
   // Route to login user, decrypts password before calling loginUser controller
-  app.post("/login", decryptUserPassword, loginUser);
+  app.post("/api/auth/login", decryptUserPassword, loginUser);
 }

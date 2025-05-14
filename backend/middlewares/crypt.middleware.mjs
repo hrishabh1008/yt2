@@ -34,17 +34,24 @@ export async function encryptUserPassword(req, res, next) {
  * This ensures that the provided password matches the stored hashed password.
  */
 export async function decryptUserPassword(req, res, next) {
-  const { userName, userPassword } = req.body; // Extract userName and userPassword from the request body
+  const { userName, userPassword, userEmail } = req.body; // Extract userName, userPassword, userEmail from the request body
 
   try {
-    // Find the user in the database by their userName
-    const user = await userModel.findOne({ userName: userName });
+    // Find the user in the database by their userName or userEmail
+    const user = await userModel.findOne({
+      $or: [
+        userName ? { userName } : null,
+        userEmail ? { userEmail } : null,
+      ].filter(Boolean),
+    });
 
     // If the user does not exist, return an error response
     if (!user) {
       return res
         .status(401)
-        .send({ message: `User doesn't exist with this userName!` });
+        .send({
+          message: `User doesn't exist with this userName or userEmail!`,
+        });
     }
 
     // Compare the provided password with the stored hashed password

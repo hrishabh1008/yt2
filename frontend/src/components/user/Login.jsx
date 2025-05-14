@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
+import { signinUser } from "./userAuth.Service";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle sign in logic here
-    alert(`Signed in as ${email}`);
+    const userData = {
+      userEmail: email,
+      userPassword: password,
+    };
+    const response = await signinUser(userData);
+    // console.log(response);
+    response.status == 200
+      ? alert(`Signed in as ${email}`)
+      : alert("Unable to login- check console");
   };
 
   function handleCreateAccount(e) {
@@ -41,7 +48,7 @@ const Login = () => {
         </p>
         <input
           type="email"
-          placeholder="Email or phone"
+          placeholder="Email or User Name"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
