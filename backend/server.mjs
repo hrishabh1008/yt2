@@ -3,9 +3,14 @@ import mongoose from 'mongoose';
 import { userRouter } from './routes/user.routes.mjs';
 import { configDotenv } from "dotenv";
 
+
+
+
 const config = configDotenv();
 const atlasURI = config.parsed.MONGODB_ATLAS_URI;
 const PORT = config.parsed.PORT;
+console.log(atlasURI, PORT);
+//console .env
 
 const localDataBaseUri = "mongodb://localhost:27017/hrb-ytclone";
 //
