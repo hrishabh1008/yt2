@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
-import { FaBars, FaSearch, FaUserCircle } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-
+import { useContext } from "react";
+import { FaBars, FaSearch, FaUserCircle } from "react-icons/fa";
+import { GrChannel } from "react-icons/gr";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
+import { userContext } from "../utils/context/usersContext";
+import multiavatar from "@multiavatar/multiavatar/esm";
 
 const Header = ({ onSearch, toggleSidebar }) => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   // console.log(search);
+
+  const svgCode = (str) => {
+    if (str) {
+      return multiavatar(str);
+    } else {
+      return multiavatar("ravi");
+    }
+  };
+
+  const { isSignedIn, signOut } = useContext(userContext);
+
   const handleInputChange = (e) => setSearch(e.target.value);
 
   const handleSearchSubmit = (e) => {
@@ -60,12 +75,34 @@ const Header = ({ onSearch, toggleSidebar }) => {
         </button>
       </form>
 
+      {isSignedIn ? (
+        <>
+          <button
+            className="ml-6 flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition whitespace-nowrap"
+            onClick="">
+            <GrChannel className="mr-2 text-xl" />
+            Create Channel
+          </button>
+          <div
+            className="w-10 h-10 rounded-full ml-2"
+            dangerouslySetInnerHTML={{
+              __html: svgCode(`${Math.random}`),
+            }}></div>
+          <button
+            className="ml-2 flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition whitespace-nowrap"
+            onClick={signOut}>
+            <RiLogoutCircleRLine className="mr-2 text-xl" />
+          </button>
+        </>
+      ) : (
+        <button
+          className="ml-6 flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition whitespace-nowrap"
+          onClick={handleSignIn}>
+          <FaUserCircle className="mr-2 text-xl" /> Sign In
+        </button>
+      )}
+
       {/* SignIn Button  */}
-      <button
-        className="ml-6 flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition whitespace-nowrap"
-        onClick={handleSignIn}>
-        <FaUserCircle className="mr-2 text-xl" /> Sign In
-      </button>
     </div>
   );
 };
