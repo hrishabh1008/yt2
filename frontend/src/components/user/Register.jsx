@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { signupUser } from "./userAuth.Service";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -14,22 +15,38 @@ const Register = () => {
   const handleChange = (e) => {
     setForm((prevForm) => {
       const updatedForm = { ...prevForm, [e.target.name]: e.target.value };
-      console.log(updatedForm);
+      // console.log(updatedForm);
       return updatedForm;
     });
-    console.log(form);
+    // console.log(form);
     setError("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    const { userName, userEmail, userPassword } = form;
     e.preventDefault();
-    if (form.password !== form.confirmPassword) {
+    if (form.userPassword !== form.confirmPassword) {
       setError("Passwords do not match");
       return;
     }
-    // Submit logic here (e.g., API call)
-    alert("Registered successfully!");
-    navigate("/login");
+    const userData = {
+      userName: userName,
+      userEmail: userEmail,
+      userPassword: userPassword,
+    };
+    try {
+      const data = await signupUser(userData);
+      // console.log(data);
+      if (data.status === 201) {
+        alert("Registered successfully!");
+        navigate("/login");
+      } else {
+        setError(data.message || "Registration failed");
+      }
+    } catch (err) {
+      setError("An error occurred during registration.");
+      console.error(err);
+    }
   };
 
   function handleSignIn(e) {
