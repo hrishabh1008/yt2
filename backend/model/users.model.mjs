@@ -17,10 +17,12 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true, // userPassword is required (typo: should be 'required')
     },
-    channelName: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "channelModel", //reference to channel Model
-    },
+    channelName: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "channelModel", //reference to channel Model
+      },
+    ],
     userAvatar: {
       type: String,
       default: "https://example.com/default-avatar.png",
