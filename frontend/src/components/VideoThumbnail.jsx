@@ -40,8 +40,8 @@ const VideoThumbnail = ({ video }) => {
   // };
 
   return (
-    <Link to={`watch/${video._id}`}>
-      <div className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102">
+    <div className="flex flex-col cursor-pointer mb-4 w-80 xl:w-1/4 h-70 hover:scale-102">
+      <Link to={`watch/${video._id}`}>
         {/* // onClick={handleClick}>Thumbnail */}
         <div className="relative">
           <img
@@ -86,8 +86,8 @@ const VideoThumbnail = ({ video }) => {
             </p>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
