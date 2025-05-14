@@ -9,6 +9,7 @@ import Register from "./components/user/Register";
 import ChannelLayout from "./components/channel/ChannelLayout";
 import WatchVideo from "./components/watch/WatchVideo";
 import NotFound from "./components/NotFound";
+import WatchPageLayout from "./components/watch/WatchPageLayout";
 
 const appRouter = createBrowserRouter([
   {
@@ -19,14 +20,10 @@ const appRouter = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
-      {
-        path: "/watch/:id",
-        children: [
-          { index: true, element: <WatchVideo /> },
-          // { path: ":city", element: <ConcertsCity /> },
-          // { path: "trending", element: <ConcertsTrending /> },
-        ],
-      },
+      { path: "watch/:id", element: <WatchPageLayout /> },
+      // { path: ":city", element: <ConcertsCity /> },
+      // { path: "trending", element: <ConcertsTrending /> },
+
       {
         path: "channel",
         element: <ChannelLayout />,
