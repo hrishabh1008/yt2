@@ -19,3 +19,15 @@ export const getChannelById = async (channelId) => {
     throw error?.response?.data || { message: "Failed to fetch channel info" };
   }
 };
+
+export const getChannelByOwner = async (ownerId) => {
+  try {
+    const response = await api.get(`/api/channel/user/${ownerId}`);
+    return response.data;
+  } catch (error) {
+    if (error?.response?.status === 404) return null;
+    throw (
+      error?.response?.data || { message: "Failed to fetch channel by user" }
+    );
+  }
+};

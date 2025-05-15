@@ -55,3 +55,20 @@ export const getChannelInfo = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
+// Controller to fetch channel by ownerId (user)
+export const getChannelByOwner = async (req, res) => {
+  try {
+    const { ownerId } = req.params;
+    const channel = await channelModel.findOne({ ownerId })
+      .populate("ownerId", "userName userAvatar")
+      .populate("videos");
+    if (!channel) {
+      return res.status(404).json({ message: "No channel found for this user" });
+    }
+    res.status(200).json(channel);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};

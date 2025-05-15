@@ -4,11 +4,13 @@ import Sidebar from "../Sidebar";
 import { userContext } from "../../utils/context/usersContext";
 import { useChannel } from "../../utils/context/channelContext";
 import { ChannelProvider } from "../../utils/context/channelProvider";
-import { getChannelById } from "./Channels.services";
+import { getChannelByOwner } from "./Channels.services";
 import { useVideos } from "../../utils/context/videosContext";
-import VideoThumbnail from "../VideoThumbnail";
-import { deleteVideo, editVideo } from "../FetchVideosService";
-import CreateChannel from "./CreateChannel";
+import { deleteVideo, editVideo, uploadVideo } from "../FetchVideosService";
+import ChannelHeader from "./ChannelHeader";
+import ChannelTabs from "./ChannelTabs";
+import ChannelVideoGrid from "./ChannelVideoGrid";
+import ChannelModals from "./ChannelModals";
 
 const ChannelPageLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,35 +29,44 @@ const ChannelPageLayout = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [actionError, setActionError] = useState("");
   const [actionSuccess, setActionSuccess] = useState("");
+  const [showUploadModal, setShowUploadModal] = useState(false);
+  const [editVideoId, setEditVideoId] = useState(null);
 
   // Fetch channel info and videos for this channel
   useEffect(() => {
-    const fetchChannelAndVideos = async () => {
+    const fetchUserChannel = async () => {
       setLoading(true);
       try {
-        // Assume channelId is stored in localStorage after creation or login
-        const channelId = localStorage.getItem("channel");
-        if (!channelId) {
+        if (!user || !user._id) {
           setChannel(null);
           setVideos([]);
           setLoading(false);
           return;
         }
-        const channelData = await getChannelById(channelId);
-        setChannel(channelData);
-        // Filter videos for this channel
-        const channelVideos = allVideos.filter(
-          (v) => v.channelName === channelId || v.channelName?._id === channelId
-        );
-        setVideos(channelVideos);
+        // Check if user owns a channel
+        const userChannel = await getChannelByOwner(user._id);
+        if (userChannel) {
+          setChannel(userChannel);
+          localStorage.setItem("channel", userChannel._id);
+          // Filter videos for this channel
+          const channelVideos = allVideos.filter(
+            (v) =>
+              v.channelName === userChannel._id ||
+              v.channelName?._id === userChannel._id
+          );
+          setVideos(channelVideos);
+        } else {
+          setChannel(null);
+          setVideos([]);
+        }
       } catch (err) {
         setError(err.message || "Failed to load channel");
       } finally {
         setLoading(false);
       }
     };
-    fetchChannelAndVideos();
-  }, [allVideos, setChannel, setVideos, setLoading, setError]);
+    fetchUserChannel();
+  }, [user, allVideos, setChannel, setVideos, setLoading, setError]);
 
   // Edit and delete video handlers (no reload)
   const handleDeleteVideo = async (videoId) => {
@@ -82,118 +93,137 @@ const ChannelPageLayout = () => {
       setActionError(err.message || "Failed to update video");
     }
   };
-
+  const handleUploadVideo = async (videoData) => {
+    setActionError("");
+    setActionSuccess("");
+    try {
+      const payload = {
+        ...videoData,
+        channelId: channel._id,
+        userId: user._id,
+      };
+      const res = await uploadVideo(payload);
+      setVideos([res.video, ...videos]);
+      setActionSuccess("Video uploaded successfully.");
+    } catch (err) {
+      setActionError(err.message || "Failed to upload video");
+    }
+  };
+  const handleEditVideoModal = (videoId) => {
+    setEditVideoId(videoId);
+  };
+  const handleEditVideoSave = async (newData) => {
+    if (!editVideoId) return;
+    await handleEditVideo(editVideoId, newData);
+    setEditVideoId(null);
+  };
   const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
 
-  if (loading) return <div>Loading channel...</div>;
-  if (error) return <div className="text-red-600 p-4">{error}</div>;
+  if (loading)
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-50">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mx-auto" />
+        <span className="ml-4 text-lg text-gray-700">Loading channel...</span>
+      </div>
+    );
+  if (error)
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-50">
+        <div className="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded shadow">
+          {error}
+        </div>
+      </div>
+    );
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Header onSearch={() => {}} toggleSidebar={toggleSidebar} />
       <div className="flex flex-1 pt-16 overflow-hidden">
         <Sidebar isSidebarOpen={isSidebarOpen} />
-        <main className="flex-1 overflow-auto bg-gray-50 ml-0 p-4">
+        <main className="flex-1 overflow-auto bg-transparent ml-0 p-4">
           {/* Channel Details */}
           {channel ? (
-            <div className="bg-white rounded-lg shadow p-4 mb-4">
-              <h2 className="text-2xl font-bold mb-2">{channel.channelName}</h2>
-              <div className="text-gray-700 mb-1">{channel.description}</div>
-              <div className="text-gray-500 text-sm mb-2">
-                Subscribers: {channel.subscribers || 0}
+            <>
+              <ChannelHeader
+                channel={channel}
+                user={user}
+                onUploadClick={() => setShowUploadModal(true)}
+              />
+              <div className="mb-6">
+                <ChannelTabs />
               </div>
-              <div className="flex gap-2 mb-2">
-                <button className="bg-black text-white px-4 py-2 rounded-full font-medium">
-                  Subscribe
-                </button>
-                <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">
-                  Join
-                </button>
-              </div>
-            </div>
+              <section className="mb-8">
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  Your Videos
+                </h3>
+                {videos.length === 0 ? (
+                  <div className="bg-white rounded-lg shadow p-8 text-center text-gray-500 border border-dashed border-gray-300">
+                    <span className="block mb-2 text-2xl">📹</span>
+                    No videos yet. Click{" "}
+                    <span className="font-semibold text-blue-600">
+                      Upload Video
+                    </span>{" "}
+                    to add your first video!
+                  </div>
+                ) : (
+                  <ChannelVideoGrid
+                    videos={videos}
+                    user={user}
+                    channel={channel}
+                    editVideoId={editVideoId}
+                    onEditModal={handleEditVideoModal}
+                    onDelete={handleDeleteVideo}
+                    onEditSave={handleEditVideoSave}
+                    setEditVideoId={setEditVideoId}
+                  />
+                )}
+              </section>
+            </>
           ) : (
-            <div className="bg-white rounded-lg shadow p-4 mb-4 text-center">
-              <p>No channel found.</p>
+            <div className="bg-white rounded-lg shadow p-8 mb-4 text-center border border-dashed border-gray-300">
+              <p className="text-lg text-gray-700 mb-2">No channel found.</p>
               {isSignedIn && (
                 <button
                   onClick={() => setShowCreateModal(true)}
-                  className="mt-2 bg-blue-600 text-white px-4 py-2 rounded">
+                  className="mt-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
                   Create Channel
                 </button>
               )}
             </div>
           )}
-
-          {actionError && (
-            <div className="text-red-600 mb-2">{actionError}</div>
-          )}
-          {actionSuccess && (
-            <div className="text-green-600 mb-2">{actionSuccess}</div>
-          )}
-
-          {/* Tabs */}
-          <div className="flex gap-4 border-b mb-4">
-            <button className="px-4 py-2 border-b-2 border-black font-semibold">
-              Home
-            </button>
-            <button className="px-4 py-2 text-gray-500">Videos</button>
-            <button className="px-4 py-2 text-gray-500">Shorts</button>
-            <button className="px-4 py-2 text-gray-500">Live</button>
-            <button className="px-4 py-2 text-gray-500">Playlists</button>
-            <button className="px-4 py-2 text-gray-500">Community</button>
-            <button className="px-4 py-2 text-gray-500">Channels</button>
-            <button className="px-4 py-2 text-gray-500">About</button>
-          </div>
-
-          {/* Channel Videos List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {videos.map((video) => (
-              <div key={video._id} className="relative group">
-                <VideoThumbnail video={video} />
-                {/* Edit/Delete only for channel owner */}
-                {user &&
-                  channel &&
-                  String(channel.ownerId) === String(user._id) && (
-                    <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition">
-                      <button
-                        className="bg-yellow-400 text-black px-2 py-1 rounded"
-                        onClick={() =>
-                          handleEditVideo(video._id, {
-                            /* newData */
-                          })
-                        }>
-                        Edit
-                      </button>
-                      <button
-                        className="bg-red-600 text-white px-2 py-1 rounded"
-                        onClick={() => handleDeleteVideo(video._id)}>
-                        Delete
-                      </button>
-                    </div>
-                  )}
+          {/* Feedback messages */}
+          <div className="fixed top-4 right-4 z-50">
+            {/* {actionError && (
+              <div className="bg-red-500 text-white px-4 py-2 rounded shadow animate-fade-in mb-2">
+                {actionError}
               </div>
-            ))}
+            )} */}
+            {actionSuccess && (
+              <div className="bg-green-500 text-white px-4 py-2 rounded shadow animate-fade-in">
+                {actionSuccess}
+              </div>
+            )}
           </div>
-
-          {/* Create Channel Modal (if needed) */}
-          {showCreateModal && (
-            <CreateChannel
-              isOpen={showCreateModal}
-              onClose={() => setShowCreateModal(false)}
-              user={user}
-              onChannelCreated={async (newChannel) => {
-                setChannel(newChannel.newChannel);
-                setShowCreateModal(false);
-              }}
-            />
-          )}
+          {/* Modals for create channel and upload video */}
+          <ChannelModals
+            showCreateModal={showCreateModal}
+            setShowCreateModal={setShowCreateModal}
+            user={user}
+            onChannelCreated={async (newChannel) => {
+              setChannel(newChannel.newChannel);
+              setShowCreateModal(false);
+            }}
+            showUploadModal={showUploadModal}
+            setShowUploadModal={setShowUploadModal}
+            channel={channel}
+            onUploadVideo={handleUploadVideo}
+          />
         </main>
       </div>
     </div>
   );
 };
 
-// Wrap with ChannelProvider for state management
 const ChannelPageWithProvider = (props) => (
   <ChannelProvider>
     <ChannelPageLayout {...props} />

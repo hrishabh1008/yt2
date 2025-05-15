@@ -50,3 +50,13 @@ export const editVideo = async (id, data) => {
     throw error.response?.data || error;
   }
 };
+
+// Upload a new video
+export const uploadVideo = async (data) => {
+  try {
+    const res = await api.post("/api/videos", data);
+    return res.data;
+  } catch (error) {
+    throw error.response?.data || error;
+  }
+};

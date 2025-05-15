@@ -1,12 +1,13 @@
 import videoModel from "../model/videos.model.mjs";
+import channelModel from "../model/channels.model.mjs";
 
 export const getAllVideos = async (req, res) => {
   try {
     // const videos = await videoModel.find();
     const videos = await videoModel.find().populate({
-      path: "comments",//"comments" is field of videoModel with reference to commentModel
+      path: "comments", //"comments" is field of videoModel with reference to commentModel
       populate: {
-        path: "userName",//"userName" is field in commentModel with reference to userModel
+        path: "userName", //"userName" is field in commentModel with reference to userModel
         select: "userName userAvatar", // Only get these userName and userAvatar from the the userModel
       },
     });
@@ -35,17 +36,13 @@ export const getVideoById = async (req, res) => {
   }
 };
 
-
-
-
-
 export const searchVideos = async (req, res) => {
   try {
     const { title, category } = req.query;
     const query = {};
 
     if (title) {
-      query.title = { $regex: title, $options: "i" };//$regex= query to match pattern within string fields & $options : "i" makes the pattern matching insensitive to the case of string(i.e. irrespective of upper/lower case)
+      query.title = { $regex: title, $options: "i" }; //$regex= query to match pattern within string fields & $options : "i" makes the pattern matching insensitive to the case of string(i.e. irrespective of upper/lower case)
     }
 
     if (category) {
@@ -59,8 +56,31 @@ export const searchVideos = async (req, res) => {
   }
 };
 
-
-
+export const uploadVideo = async (req, res) => {
+  try {
+    const { title, videoUrl, description, channelId, userId } = req.body;
+    if (!title || !videoUrl || !channelId || !userId) {
+      return res.status(400).json({ message: "Missing required fields" });
+    }
+    // Create the video
+    const video = await videoModel.create({
+      title,
+      videoUrl,
+      description,
+      channelName: channelId,
+      uploadDate: new Date(),
+      // Optionally add more fields (e.g., thumbnailUrl, etc.)
+    });
+    // Add video to channel's videos array
+    await channelModel.findByIdAndUpdate(channelId, {
+      $push: { videos: video._id },
+    });
+    res.status(201).json({ message: "Video uploaded successfully", video });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 // export const uploadVideos = async (req, res) => {
 //   try {
