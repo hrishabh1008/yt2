@@ -41,6 +41,17 @@ A full-stack YouTube-like video platform built with React (Vite), Node.js, and M
 
 ---
 
+
+## 🎬 Demo Video
+
+Watch the demo video directly below:
+
+<video src="https://github.com/hrishabh1008/yt2/blob/main/YouTube%20Retro%20(compressed%20minimum%20)%20-%20Google%20Chrome%202025-05-15%2020-38-47%20(1).mp4" controls width="100%" style="max-width: 720px; margin: 1em 0;">
+    Your browser does not support the video tag.
+</video>
+
+---
+
 ## Application Flow
 
 1. **User signs up or logs in**
