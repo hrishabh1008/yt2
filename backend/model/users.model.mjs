@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
     channelName: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "channelModel", //reference to channel Model
+        ref: "channels", //reference to channel Model
       },
     ],
     userAvatar: {

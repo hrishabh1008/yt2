@@ -85,7 +85,7 @@ const Header = ({ onSearch, toggleSidebar }) => {
             className="ml-6 flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition whitespace-nowrap"
             onClick={handleChannelBtn}>
             <GrChannel className="mr-2 text-xl" />
-            Create Channel
+            Channel
           </button>
           <div
             className="w-10 h-10 rounded-full ml-2"

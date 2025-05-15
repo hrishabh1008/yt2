@@ -8,7 +8,7 @@ const videoSchema = new mongoose.Schema(
     description: { type: String },
     channelName: {
       type: mongoose.Schema.Types.ObjectId, // Reference to the Channel model
-      ref: "channelModel",
+      ref: "channels",
       required: true,
     },
     views: { type: Number, default: 0 },
@@ -19,7 +19,7 @@ const videoSchema = new mongoose.Schema(
     comments: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "commentModel", //reference to comment model
+        ref: "comments", //reference to comment model
       },
     ],
   },

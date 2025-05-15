@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Login from "./components/user/Login";
 import Register from "./components/user/Register";
-import ChannelLayout from "./components/channel/ChannelPageLayout";
+// import ChannelLayout from "./components/channel/ChannelPageLayout";
 // import WatchVideo from "./components/watch/WatchVideo";
 import NotFound from "./components/NotFound";
 import WatchPageLayout from "./components/watch/WatchPageLayout";
@@ -14,6 +14,7 @@ import { UserProvider } from "./utils/context/userProvider";
 import { VideosProvider } from "./utils/context/videosProvider";
 import { CommentProvider } from "./utils/context/commentsProvider";
 import { AuthProvider } from "./utils/context/AuthProvider";
+import ChannelPageLayout from './components/channel/ChannelPageLayout';
 
 const appRouter = createBrowserRouter([
   {
@@ -28,10 +29,7 @@ const appRouter = createBrowserRouter([
       // { path: ":city", element: <ConcertsCity /> },
       // { path: "trending", element: <ConcertsTrending /> },
 
-      {
-        path: "channel",
-        element: <ChannelLayout />,
-      },
+      { path: "channel", element: <ChannelPageLayout /> },
     ],
   },
 ]);
