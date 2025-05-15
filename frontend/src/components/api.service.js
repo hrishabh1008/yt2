@@ -8,5 +8,5 @@ const BACKEND_URL = "http://localhost:9999"//change the the URL according to the
 const api = axios.create({
   baseURL: BACKEND_URL, 
 });
-console.log(api)
+// console.log(api)
 export default api;

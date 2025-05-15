@@ -10,7 +10,9 @@ import ChannelLayout from "./components/channel/ChannelLayout";
 import WatchVideo from "./components/watch/WatchVideo";
 import NotFound from "./components/NotFound";
 import WatchPageLayout from "./components/watch/WatchPageLayout";
-import { UserProvider } from "./utils/context/usersContext";
+import { UserProvider } from "./utils/context/userProvider";
+import { VideosProvider } from "./utils/context/videosProvider";
+import { CommentProvider } from "./utils/context/commentsProvider";
 
 const appRouter = createBrowserRouter([
   {
