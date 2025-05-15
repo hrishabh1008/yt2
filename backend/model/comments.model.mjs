@@ -4,7 +4,7 @@ const commentSchema = new mongoose.Schema(
   {
     userName: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "userModel", // Reference to User model
+      ref: "users", // Reference to User model (should match mongoose.model name)
       required: true,
     },
     content: {
