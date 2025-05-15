@@ -56,7 +56,11 @@ const HomePage = () => {
           <FilterButtons onFilterChange={handleFilterBtns} />
           <div className="flex w-full h-60 flex-wrap justify-evenly gap-6">
             {filteredVideos.map((video) => (
-              <VideoThumbnail key={video._id} video={video} />
+              <VideoThumbnail
+                key={video._id}
+                video={video}
+                channel={video?.Channel || video.channelName || ""}
+              />
             ))}
           </div>
         </main>

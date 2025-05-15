@@ -16,6 +16,7 @@ const Login = () => {
     const userData = {
       userEmail: email,
       userPassword: password,
+      userName: email,
     };
     try {
       const response = await signinUser(userData);
@@ -60,7 +61,7 @@ const Login = () => {
           to continue to YouTube
         </p>
         <input
-          type="email"
+          type="text"
           placeholder="Email or User Name"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

@@ -1,7 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
 import multiavatar from "@multiavatar/multiavatar/esm";
 
-const VideoThumbnail = ({ video, className, onEdit, onDelete, isOwner }) => {
+const VideoThumbnail = ({
+  video,
+  className,
+  onEdit,
+  onDelete,
+  isOwner,
+  channel,
+  user,
+}) => {
+  // console.log(video, className, onEdit, onDelete, isOwner, channel, user);
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -25,9 +34,11 @@ const VideoThumbnail = ({ video, className, onEdit, onDelete, isOwner }) => {
     return count;
   };
 
-  // Defensive: channelName may be an object (populated) or just an id
+  // Prefer channel prop, fallback to video.channelName logic
   const channelDisplayName =
-    (video.channelName && video.channelName.channelName) ||
+    (channel && channel?.channelName) ||
+    user ||
+    (video?.channelName && video?.Channel?.channelName) ||
     (typeof video.channelName === "string"
       ? video.channelName
       : "Unknown Channel");

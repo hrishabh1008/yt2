@@ -10,6 +10,8 @@ const ChannelVideoGrid = ({ videos, user, channel, editVideoId, onEditModal, onD
           <VideoThumbnail
             video={video}
             isOwner={true}
+            user={user}
+            channel={channel}
             onEdit={() => onEditModal(video._id)}
             onDelete={() => onDelete(video._id)}
           />
