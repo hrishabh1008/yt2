@@ -95,11 +95,13 @@ frontend/
 ## GitHub Repository
 
 - [GitHub Repo Link](https://github.com/hrishabh1008/yt2.git)
-  - (Replace with your actual repo URL)
+
 
 ---
 
 ## How to Run
+
+**CLONE REPOSITORY**
 
 1. **Backend:**
    - `cd backend`
