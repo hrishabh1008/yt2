@@ -32,16 +32,16 @@ const ChannelDetails = () => {
   if (!channel)
     return <div className="p-6 text-center">Channel not found.</div>;
 
-  const tabs = [
-    "HOME",
-    "VIDEOS",
-    "SHORTS",
-    "LIVE",
-    "PLAYLISTS",
-    "COMMUNITY",
-    "CHANNELS",
-    "ABOUT",
-  ];
+  // const tabs = [
+  //   "HOME",
+  //   "VIDEOS",
+  //   "SHORTS",
+  //   "LIVE",
+  //   "PLAYLISTS",
+  //   "COMMUNITY",
+  //   "CHANNELS",
+  //   "ABOUT",
+  // ];
 
   return (
     <div className="bg-gray-50 min-h-screen">

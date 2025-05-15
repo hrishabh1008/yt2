@@ -2,10 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 import { userContext } from "../../utils/context/usersContext";
-import {
-  useChannel,
-  ChannelProvider,
-} from "../../utils/context/channelContext";
+import { useChannel } from "../../utils/context/channelContext";
+import { ChannelProvider } from "../../utils/context/channelProvider";
 import { getChannelById } from "./Channels.services";
 import { useVideos } from "../../utils/context/videosContext";
 import VideoThumbnail from "../VideoThumbnail";
@@ -182,6 +180,7 @@ const ChannelPageLayout = () => {
             <CreateChannel
               isOpen={showCreateModal}
               onClose={() => setShowCreateModal(false)}
+              user={user}
               onChannelCreated={async (newChannel) => {
                 setChannel(newChannel.newChannel);
                 setShowCreateModal(false);

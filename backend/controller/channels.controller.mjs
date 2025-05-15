@@ -40,8 +40,9 @@ export const getChannelInfo = async (req, res) => {
     console.log(channelId);
 
     // Find the channel by channelId and populate the videos and owner information
-    const channel = await channelModel.findById(channelId)
-      .populate("user", "username avatar") // Populate the owner's info (username and avatar)
+    const channel = await channelModel
+      .findById(channelId)
+      .populate("ownerId", "userName userAvatar") // Populate the owner's info (userName and userAvatar)
       .populate("videos"); // Populate the videos associated with the channel
 
     if (!channel) {

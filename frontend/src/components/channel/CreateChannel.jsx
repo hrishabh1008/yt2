@@ -3,22 +3,21 @@ import { createChannel } from "./Channels.services";
 
 import { useNavigate } from "react-router-dom";
 
-const ChannelModal = ({ isOpen, onClose, onChannelCreated }) => {
+const ChannelModal = ({ isOpen, onClose, onChannelCreated, user }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { user: owner } = useAuth(); // move this before the state
 
   const [formData, setFormData] = useState({
     channelName: "",
-    ownerId: "",
+    ownerId: user?._id || "",
     description: "",
   });
 
   useEffect(() => {
-    if (owner) {
-      setFormData((prev) => ({ ...prev, ownerId: owner.userId }));
+    if (user && user._id) {
+      setFormData((prev) => ({ ...prev, ownerId: user._id }));
     }
-  }, [owner]);
+  }, [user]);
 
   if (!isOpen) return null;
 

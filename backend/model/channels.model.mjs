@@ -5,7 +5,7 @@ const channelSchema = new mongoose.Schema(
     channelName: { type: String, required: true },
     ownerId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'userModel',//reference to user model
+      ref: "users", //reference to user model
       required: true,
     }, // User reference
     description: { type: String, required: true },
@@ -14,7 +14,7 @@ const channelSchema = new mongoose.Schema(
       default: "https://example.com/default-banner.png",
     },
     subscribers: { type: Number, default: 0 },
-    videos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'videoModel' }], // Reference to the Video model
+    videos: [{ type: mongoose.Schema.Types.ObjectId, ref: "videos" }], // Reference to the Video model
   },
   { timestamps: true }
 );
