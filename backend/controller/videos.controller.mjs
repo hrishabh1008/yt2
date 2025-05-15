@@ -30,11 +30,58 @@ export const getVideoById = async (req, res) => {
     });
 
     if (!video) return res.status(404).json({ error: "videoModel not found" });
+
     res.json(video);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
+
+export const getVideoByIdAndUpdate = async (req, res) => {
+  try {
+    const updatedVideo = await videoModel
+      .findByIdAndUpdate(req.params.id, req.body, { new: true })
+      .populate({
+        path: "comments",
+        populate: {
+          path: "userName",
+          select: "userName userAvatar",
+        },
+      });
+
+    if (!updatedVideo) {
+      return res.status(404).json({ error: "videoModel not found" });
+    }
+
+    res.json(updatedVideo);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+export const getVideoByIdAndDelete = async (req, res) => {
+  try {
+    const deletedVideo = await videoModel
+      .findByIdAndDelete(req.params.id)
+      .populate({
+        path: "comments",
+        populate: {
+          path: "userName",
+          select: "userName userAvatar",
+        },
+      });
+
+    if (!deletedVideo) {
+      return res.status(404).json({ error: "videoModel not found" });
+    }
+
+    res.json({ message: "Video deleted successfully", video: deletedVideo });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+
 
 export const searchVideos = async (req, res) => {
   try {

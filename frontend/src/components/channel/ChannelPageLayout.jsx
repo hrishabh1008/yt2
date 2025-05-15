@@ -68,6 +68,18 @@ const ChannelPageLayout = () => {
     fetchUserChannel();
   }, [user, allVideos, setChannel, setVideos, setLoading, setError]);
 
+  // --- Add this useEffect to ChannelPageLayout to auto-hide messages ---
+
+  useEffect(() => {
+    if (actionError || actionSuccess) {
+      const timer = setTimeout(() => {
+        setActionError("");
+        setActionSuccess("");
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [actionError, actionSuccess]);
+
   // Edit and delete video handlers (no reload)
   const handleDeleteVideo = async (videoId) => {
     setActionError("");
@@ -193,11 +205,11 @@ const ChannelPageLayout = () => {
           )}
           {/* Feedback messages */}
           <div className="fixed top-4 right-4 z-50">
-            {/* {actionError && (
+            {actionError && (
               <div className="bg-red-500 text-white px-4 py-2 rounded shadow animate-fade-in mb-2">
                 {actionError}
               </div>
-            )} */}
+            )}
             {actionSuccess && (
               <div className="bg-green-500 text-white px-4 py-2 rounded shadow animate-fade-in">
                 {actionSuccess}
@@ -205,6 +217,7 @@ const ChannelPageLayout = () => {
             )}
           </div>
           {/* Modals for create channel and upload video */}
+
           <ChannelModals
             showCreateModal={showCreateModal}
             setShowCreateModal={setShowCreateModal}
