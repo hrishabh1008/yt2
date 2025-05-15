@@ -4,7 +4,7 @@ import multiavatar from "@multiavatar/multiavatar/esm";
 
 const VideoThumbnail = ({ video, className }) => {
   const navigate = useNavigate();
-
+  // console.log(video);
   // const avatarContainer = useRef(null);
   const handleClick = () => {
     navigate(`watch/${video._id}`);

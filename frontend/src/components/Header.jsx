@@ -35,6 +35,10 @@ const Header = ({ onSearch, toggleSidebar }) => {
     navigate("/login");
   };
 
+  const handleChannelBtn = () => {
+    navigate("/channel");
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full z-30 bg-white border-b border-gray-200 flex items-center h-16 px-4 md:px-8 shadow-sm">
       <button
@@ -79,7 +83,7 @@ const Header = ({ onSearch, toggleSidebar }) => {
         <>
           <button
             className="ml-6 flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition whitespace-nowrap"
-            onClick="">
+            onClick={handleChannelBtn}>
             <GrChannel className="mr-2 text-xl" />
             Create Channel
           </button>

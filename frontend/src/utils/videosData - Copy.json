@@ -1,12 +1,12 @@
 [
   {
-    "_id": "video01",
+    "id": "video01",
     "title": "Learn React in 30 Minutes",
     "videoUrl": "https://www.youtube.com/watch?v=hQAHSlTtcmY",
     "thumbnailUrl": "https://i.ytimg.com/vi/hQAHSlTtcmY/maxresdefault.jpg",
     "description": "In this crash course I will take you through the basics of React including development environment setup, components, state, props, rendering lists, HTTP requests and more.",
     "Channel": {
-      "_id": "channel01",
+      "id": "channel01",
       "channelName": "Web Dev Simplified",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lcC9SQP-WBK3ZYkIWUcS5kzQtPJN6-LR3GiY=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -18,9 +18,9 @@
     "subscriberCount": 1250000,
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -28,9 +28,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -40,13 +40,13 @@
     ]
   },
   {
-    "_id": "video02",
+    "id": "video02",
     "title": "React JS Full Course for Beginners | Complete All-in-One Tutorial | 9 Hours",
     "videoUrl": "https://www.youtube.com/watch?v=RVFAyFWO4go",
     "thumbnailUrl": "https://i.ytimg.com/vi/RVFAyFWO4go/maxresdefault.jpg",
     "description": "This React JS Full Course for Beginners is a complete tutorial for React beginners. It covers React JS extensively, React Hooks, React Routers, Redux, and React Projects. It includes React JS theory and React Practice code with complete project examples.",
     "Channel": {
-      "_id": "channel02",
+      "id": "channel02",
       "channelName": "Dave Gray",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mEnkIRpfAn0QqrUMa0Ell6iLO7PfXGYH25BmyJ=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -58,9 +58,9 @@
     "subscriberCount": 349000,
     "comments": [
       {
-        "_id": "comment03",
+        "id": "comment03",
         "user": {
-          "_id": "user04",
+          "id": "user04",
           "username": "ReactFanatic",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=ReactFanatic"
         },
@@ -70,13 +70,13 @@
     ]
   },
   {
-    "_id": "video03",
+    "id": "video03",
     "title": "Next.js 14 Tutorial - Full Course for Beginners",
     "videoUrl": "https://www.youtube.com/watch?v=843nec-IvW0",
     "thumbnailUrl": "https://i.ytimg.com/vi/843nec-IvW0/maxresdefault.jpg",
     "description": "In this Next.js 14 course, you'll go from the basics to building a full-stack app with the latest features from Next.js 14. App Router, Server Actions, Postgres, Prisma, Auth, modern loading, error states, and much more!",
     "Channel": {
-      "_id": "channel03",
+      "id": "channel03",
       "channelName": "freeCodeCamp.org",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mD95kW9TeQs3qjHvrsXKGjFUFGT7SrFNKLSGPUiA=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -88,9 +88,9 @@
     "subscriberCount": 8400000,
     "comments": [
       {
-        "_id": "comment04",
+        "id": "comment04",
         "user": {
-          "_id": "user05",
+          "id": "user05",
           "username": "JSDevPro",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=JSDevPro"
         },
@@ -98,9 +98,9 @@
         "createdAt": "2024-01-03T09:21:00Z"
       },
       {
-        "_id": "comment05",
+        "id": "comment05",
         "user": {
-          "_id": "user06",
+          "id": "user06",
           "username": "NextJSLearner",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=NextJSLearner"
         },
@@ -110,13 +110,13 @@
     ]
   },
   {
-    "_id": "video04",
+    "id": "video04",
     "title": "Build a ChatGPT AI App in JavaScript - OpenAI API",
     "videoUrl": "https://www.youtube.com/watch?v=05D-2t5EASI",
     "thumbnailUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*LyZcwuLWv2FArOumCxobpA.png",
     "description": "Learn to build your own ChatGPT-like AI application using OpenAI API, working with environment variables, managing fake users, building server-side routes and more!",
     "Channel": {
-      "_id": "channel04",
+      "id": "channel04",
       "channelName": "JavaScript Mastery",
       "avatar": "https://yt3.googleusercontent.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -128,9 +128,9 @@
     "subscriberCount": 1180000,
     "comments": [
       {
-        "_id": "comment06",
+        "id": "comment06",
         "user": {
-          "_id": "user07",
+          "id": "user07",
           "username": "AIEnthusiast",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=AIEnthusiast"
         },
@@ -140,13 +140,13 @@
     ]
   },
   {
-    "_id": "video05",
+    "id": "video05",
     "title": "TypeScript Tutorial - Full Course for Beginners",
     "videoUrl": "https://www.youtube.com/watch?v=30LWjhZzg50",
     "thumbnailUrl": "https://i.ytimg.com/vi/30LWjhZzg50/maxresdefault.jpg",
     "description": "Learn TypeScript from scratch by building a shopping cart application. This TypeScript course includes all TypeScript basics, types, compiler config, functions, and more.",
     "Channel": {
-      "_id": "channel05",
+      "id": "channel05",
       "channelName": "Dave Gray",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mEnkIRpfAn0QqrUMa0Ell6iLO7PfXGYH25BmyJ=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -158,9 +158,9 @@
     "subscriberCount": 349000,
     "comments": [
       {
-        "_id": "comment07",
+        "id": "comment07",
         "user": {
-          "_id": "user08",
+          "id": "user08",
           "username": "TypeScriptFan",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=TypeScriptFan"
         },
@@ -168,9 +168,9 @@
         "createdAt": "2023-01-12T11:30:00Z"
       },
       {
-        "_id": "comment08",
+        "id": "comment08",
         "user": {
-          "_id": "user09",
+          "id": "user09",
           "username": "WebDevStudent",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevStudent"
         },
@@ -180,13 +180,13 @@
     ]
   },
   {
-    "_id": "video06",
+    "id": "video06",
     "title": "React Native Crash Course 2023",
     "videoUrl": "https://www.youtube.com/watch?v=mJ3bGvy0WAY",
     "thumbnailUrl": "https://i.ytimg.com/vi/mJ3bGvy0WAY/maxresdefault.jpg",
     "description": "In this React Native crash course, you'll learn how to build a React Native app from scratch, including setup, components, navigation, styling, and more.",
     "Channel": {
-      "_id": "channel06",
+      "id": "channel06",
       "channelName": "Lama Dev",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lVbj7-p1RfJjLHxFONrBu9GCVgGP7SNu-t7PXU=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -198,9 +198,9 @@
     "subscriberCount": 421000,
     "comments": [
       {
-        "_id": "comment09",
+        "id": "comment09",
         "user": {
-          "_id": "user10",
+          "id": "user10",
           "username": "MobileDev",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=MobileDev"
         },
@@ -210,13 +210,13 @@
     ]
   },
   {
-    "_id": "video07",
+    "id": "video07",
     "title": "CSS Tutorial - Full Course for Beginners",
     "videoUrl": "https://www.youtube.com/watch?v=OXGznpKZ_sA",
     "thumbnailUrl": "https://i.ytimg.com/vi/OXGznpKZ_sA/maxresdefault.jpg",
     "description": "Learn CSS from scratch with this comprehensive beginner's tutorial. This course covers selectors, box model, flexbox, grid, responsive design, animations, and more.",
     "Channel": {
-      "_id": "channel03",
+      "id": "channel03",
       "channelName": "freeCodeCamp.org",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mD95kW9TeQs3qjHvrsXKGjFUFGT7SrFNKLSGPUiA=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -228,9 +228,9 @@
     "subscriberCount": 8400000,
     "comments": [
       {
-        "_id": "comment10",
+        "id": "comment10",
         "user": {
-          "_id": "user11",
+          "id": "user11",
           "username": "CSSMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CSSMaster"
         },
@@ -238,9 +238,9 @@
         "createdAt": "2021-11-06T14:25:00Z"
       },
       {
-        "_id": "comment11",
+        "id": "comment11",
         "user": {
-          "_id": "user12",
+          "id": "user12",
           "username": "DesignNovice",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=DesignNovice"
         },
@@ -250,13 +250,13 @@
     ]
   },
   {
-    "_id": "video08",
+    "id": "video08",
     "title": "MongoDB Crash Course 2023",
     "videoUrl": "https://www.youtube.com/watch?v=2QQGWYe7IDU",
     "thumbnailUrl": "https://i.ytimg.com/vi/2QQGWYe7IDU/maxresdefault.jpg",
     "description": "Learn MongoDB from scratch in this comprehensive crash course. Topics include CRUD operations, aggregation framework, indexing, data modeling best practices, and more.",
     "Channel": {
-      "_id": "channel07",
+      "id": "channel07",
       "channelName": "Web Dev Simplified",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lcC9SQP-WBK3ZYkIWUcS5kzQtPJN6-LR3GiY=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -268,9 +268,9 @@
     "subscriberCount": 1250000,
     "comments": [
       {
-        "_id": "comment12",
+        "id": "comment12",
         "user": {
-          "_id": "user13",
+          "id": "user13",
           "username": "DatabasePro",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=DatabasePro"
         },
@@ -280,13 +280,13 @@
     ]
   },
   {
-    "_id": "video09",
+    "id": "video09",
     "title": "How To Build A Weather App In React JS | Weather App React JS Project From Scratch",
     "videoUrl": "https://www.youtube.com/watch?v=Reny0cTTv24",
     "thumbnailUrl": "https://i.ytimg.com/vi/Reny0cTTv24/maxresdefault.jpg",
     "description": "Learn how to create a beautiful, functional weather application using React and OpenWeatherMap API. This tutorial teaches API integration, state management, and responsive design principles.",
     "Channel": {
-      "_id": "channel08",
+      "id": "channel08",
       "channelName": "Tyler Potts",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kE4VDuZFRgr4y2QYKdtJrbZuXUvxXtlnAzrGuz=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -298,9 +298,9 @@
     "subscriberCount": 93500,
     "comments": [
       {
-        "_id": "comment13",
+        "id": "comment13",
         "user": {
-          "_id": "user14",
+          "id": "user14",
           "username": "ReactBeginner",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=ReactBeginner"
         },
@@ -308,9 +308,9 @@
         "createdAt": "2021-05-19T13:20:00Z"
       },
       {
-        "_id": "comment14",
+        "id": "comment14",
         "user": {
-          "_id": "user15",
+          "id": "user15",
           "username": "WeatherAppDev",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WeatherAppDev"
         },
@@ -320,13 +320,13 @@
     ]
   },
   {
-    "_id": "video10",
+    "id": "video10",
     "title": "Learn the MERN Stack - Full Tutorial (MongoDB, Express, React, Node.js)",
     "videoUrl": "https://www.youtube.com/watch?v=7CqJlxBYj-M",
     "thumbnailUrl": "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
     "description": "In this full stack tutorial, we will build a complete exercise tracking application with MongoDB, Express, React, and Node.js. Learn how these technologies work together in a real-world application.",
     "Channel": {
-      "_id": "channel03",
+      "id": "channel03",
       "channelName": "freeCodeCamp.org",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mD95kW9TeQs3qjHvrsXKGjFUFGT7SrFNKLSGPUiA=s176-c-k-c0x00ffffff-no-rj"
     },
@@ -338,9 +338,9 @@
     "subscriberCount": 8400000,
     "comments": [
       {
-        "_id": "comment15",
+        "id": "comment15",
         "user": {
-          "_id": "user16",
+          "id": "user16",
           "username": "FullStackNewbie",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=FullStackNewbie"
         },
@@ -348,9 +348,9 @@
         "createdAt": "2023-01-05T20:15:00Z"
       },
       {
-        "_id": "comment16",
+        "id": "comment16",
         "user": {
-          "_id": "user17",
+          "id": "user17",
           "username": "DevJobSeeker",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=DevJobSeeker"
         },
@@ -360,7 +360,7 @@
     ]
   },
   {
-    "_id": 1,
+    "id": 1,
     "thumbnailUrl": "https://i.ytimg.com/vi/OPKpmCCyO-U/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBW0_HV1zj6SA50OP03hT4hZEP9Rw",
     "videoUrl": "https://www.youtube.com/embed/OPKpmCCyO-U?si=G-BxVM2eoQ_msTdb",
     "title": "Umbridge In The Forbidden Forest - Harry Potter And The Order Of The Phoenix",
@@ -369,9 +369,9 @@
     "uploadDate": "4 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -379,9 +379,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -392,7 +392,7 @@
     "genre": "entertainment, gaming"
   },
   {
-    "_id": 2,
+    "id": 2,
     "thumbnailUrl": "https://i.ytimg.com/vi/02pr2W7FT-c/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDnde6MIED4ku98otLz3AGjJZxmxQ",
     "videoUrl": "https://www.youtube.com/embed/02pr2W7FT-c?si=dYX5ILLMpBB3S2FK",
     "title": "Wizard Battle: Dumbledore vs Voldemort | Harry Potter and the Order of the Phoenix",
@@ -401,9 +401,9 @@
     "uploadDate": "6 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -411,9 +411,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -424,7 +424,7 @@
     "genre": "entertainment, live"
   },
   {
-    "_id": 3,
+    "id": 3,
     "thumbnailUrl": "https://i.ytimg.com/vi/Jy2_J5WCzDY/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBZ65JP67OFdblwswh1UWviQHJ-PQ",
     "videoUrl": "https://www.youtube.com/embed/Jy2_J5WCzDY?si=4q6Wjgw-XxfeJ7L0",
     "title": "Kung Fu Panda (2008) - Our Battle Will Be Legendary! Scene (7/10) | Movieclips",
@@ -433,9 +433,9 @@
     "uploadDate": "10 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -443,9 +443,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -456,7 +456,7 @@
     "genre": "entertainment, sports"
   },
   {
-    "_id": 4,
+    "id": 4,
     "thumbnailUrl": "https://i.ytimg.com/vi/Oo3qsxihXqY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBbZ-EDOv9NehfJDvjc4MiQu0uxIQ",
     "videoUrl": "https://www.youtube.com/embed/zKd_kxcxGbo?si=UcAq_HtV5IYfNY4V",
     "title": "Mediocrity is Rising | Raw and real talk before 2024 ends.",
@@ -465,9 +465,9 @@
     "uploadDate": "2 days ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -475,9 +475,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -488,7 +488,7 @@
     "genre": "education"
   },
   {
-    "_id": 5,
+    "id": 5,
     "thumbnailUrl": "https://i.ytimg.com/vi/A2OQ-f_LOHA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB0SuqXNVwZASSmbuqDliGW-e_dZw",
     "videoUrl": "https://www.youtube.com/embed/A2OQ-f_LOHA?si=x1s0p7w7B2VFWdun",
     "title": "Emergency | Official Trailer | In Cinemas 17th January, 2025 | Kangana Ranaut",
@@ -497,9 +497,9 @@
     "uploadDate": "2 months ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -507,9 +507,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -520,7 +520,7 @@
     "genre": "entertainment, music"
   },
   {
-    "_id": 6,
+    "id": 6,
     "thumbnailUrl": "https://i.ytimg.com/vi/XK8loB2jYDE/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAOkgc-ZFjQ6pyu4ect1kLSWzPw0A",
     "videoUrl": "https://www.youtube.com/embed/XK8loB2jYDE?si=VSA1UITL5ebIpVNd",
     "title": "Reference Types: Objects && Arrays in JS || JavaScript Series 2024",
@@ -529,9 +529,9 @@
     "uploadDate": "3 months ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -539,9 +539,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -552,7 +552,7 @@
     "genre": "education"
   },
   {
-    "_id": 7,
+    "id": 7,
     "thumbnailUrl": "https://i.ytimg.com/vi/hP5s45CRFP8/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDstQvVdf-8Oosji6uwJQ5t1hCx6A",
     "videoUrl": "https://www.youtube.com/embed/hP5s45CRFP8?si=PV2vW4mgl-P4_0qS",
     "title": "TechXcelerate 24 - Day 4: Blockchain with Kanishk Khurana",
@@ -561,9 +561,9 @@
     "uploadDate": "3 months ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -571,9 +571,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -584,7 +584,7 @@
     "genre": "education, web"
   },
   {
-    "_id": 8,
+    "id": 8,
     "thumbnailUrl": "https://i.ytimg.com/vi/C9cN_6_qloA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAKsoIV3R5Wm8Hr56bEgmtE7_vReg",
     "videoUrl": "https://www.youtube.com/embed/YBp2OcI-nGs?si=VDiYaxgJ_eTZ8rCa",
     "title": "Vijayi Bhava - Full Video | Manikarnika | Kangana Ranaut | Shankar Ehsaan Loy | Prasoon Joshi",
@@ -593,9 +593,9 @@
     "uploadDate": "3 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -603,9 +603,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -616,7 +616,7 @@
     "genre": "songs, live, fashion, beauty"
   },
   {
-    "_id": 9,
+    "id": 9,
     "thumbnailUrl": "https://i.ytimg.com/vi/abyQXe3hxRc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA8gS6Qw4eFL2PR_XTCGVlgpVq0Tw",
     "videoUrl": "https://www.youtube.com/embed/Su1LOpjvdZ4?si=y67ZoAa6sqHJKB3t",
     "title": "Harry Potter and the Deathly Hallows - Main Trailer",
@@ -625,9 +625,9 @@
     "uploadDate": "18 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -635,9 +635,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -648,7 +648,7 @@
     "genre": "entertainment, gaming"
   },
   {
-    "_id": 10,
+    "id": 10,
     "thumbnailUrl": "https://i.ytimg.com/vi/0BDt08x-De8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDDQXxRKSX3XZCKOrtZruCYYtIvpw",
     "videoUrl": "https://www.youtube.com/embed/0BDt08x-De8?si=wemoyrN4_7F-YY_h",
     "title": "E-Commerce clone will not get you hired - Real world project ideas",
@@ -657,9 +657,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -667,9 +667,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -680,7 +680,7 @@
     "genre": "education, learning"
   },
   {
-    "_id": 11,
+    "id": 11,
     "thumbnailUrl": "https://i.ytimg.com/vi/VTLCoHnyACE/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC8fQQIljrUqn0NzkqX1iiAdw9Dfg",
     "videoUrl": "https://www.youtube.com/embed/1yrh60og6qc?si=rjJ6towYvc7NQmPz",
     "title": "DSA Complete Series 🚀 : Data Structures & Algorithms | by Shradha Khapra Ma\"am",
@@ -689,9 +689,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -699,9 +699,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -712,7 +712,7 @@
     "genre": "education, learning"
   },
   {
-    "_id": 12,
+    "id": 12,
     "thumbnailUrl": "https://i.ytimg.com/vi/zxLH5aSmlBI/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBKeyx4tFQY5TBO5SJ5_W23sEtK7g",
     "videoUrl": "https://www.youtube.com/embed/VA0mJHo5X_s?si=NcNUGoXSoDPBFj0_",
     "title": "Kamla Harris Says she will Use Everything if Ukraine Gets Nukes | Vantage With Palki Sharma",
@@ -721,9 +721,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -731,9 +731,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -744,7 +744,7 @@
     "genre": "news"
   },
   {
-    "_id": 13,
+    "id": 13,
     "thumbnailUrl": "https://i.ytimg.com/vi/Z9T3aiIsfx8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCwTPv1ubN26vY42yHpqq4BAlyfTw",
     "videoUrl": "https://www.youtube.com/embed/Z9T3aiIsfx8?si=Woi6pJoU38sFrAlj",
     "title": "How CANADA is becoming NEXT PAKISTAN | Abhi and Niyu",
@@ -753,9 +753,9 @@
     "uploadDate": "12 days ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -763,9 +763,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -776,7 +776,7 @@
     "genre": "news"
   },
   {
-    "_id": 14,
+    "id": 14,
     "thumbnailUrl": "https://i.ytimg.com/vi/Ez8F0nW6S-w/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA6fPCgrA7WtxyXnkmP8p92K569Vw",
     "videoUrl": "https://www.youtube.com/embed/sPM2WiwA1us?si=17Dg1Vs0wtC2mvjw",
     "title": "GSoC 2025 Complete Roadmap | Google Summer of Code",
@@ -785,9 +785,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -795,9 +795,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -808,7 +808,7 @@
     "genre": "education, learning"
   },
   {
-    "_id": 15,
+    "id": 15,
     "thumbnailUrl": "https://i.ytimg.com/vi/H_dhWRxR2rI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBPCzS7kL50GA1rogFafhWHfdTDVg",
     "videoUrl": "https://www.youtube.com/embed/H_dhWRxR2rI?si=MsnSk_GThjOZWfGe",
     "title": "Aandhi | Article 370 | Yami Gautam | Shashwat Sachdev | Clinton Cerejo | Shahzad Ali",
@@ -817,9 +817,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -827,9 +827,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -840,7 +840,7 @@
     "genre": "songs"
   },
   {
-    "_id": 16,
+    "id": 16,
     "thumbnailUrl": "https://i.ytimg.com/vi/60ehXa-s-AA/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCuYifD7mwl8K64frCBhfwmQ3cS4A",
     "videoUrl": "https://www.youtube.com/embed/60ehXa-s-AA?si=Ag_czCxV76pO_H4t",
     "title": "Chefling के Channel ने {channelName:pitch से पह}ले Sharks को दी एक दिलचस्प रिश्वत | Mouth-watering Pitches",
@@ -849,9 +849,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -859,9 +859,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -872,7 +872,7 @@
     "genre": "entertainment"
   },
   {
-    "_id": 17,
+    "id": 17,
     "thumbnailUrl": "https://i.ytimg.com/vi/dKYFMa0x9Rg/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCl9sIZGs2pNRo87eULwAL_-sjB2A",
     "videoUrl": "https://www.youtube.com/embed/dKYFMa0x9Rg?si=qEjNi_Z6LohZ45jj",
     "title": "TVFs Kota Factory | Exam Anthem | Lets Crack it!",
@@ -881,9 +881,9 @@
     "uploadDate": "2 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -891,9 +891,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -904,7 +904,7 @@
     "genre": "songs"
   },
   {
-    "_id": 18,
+    "id": 18,
     "thumbnailUrl": "https://i.ytimg.com/vi/7YhpvbVWm4c/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAwwMA5zZfesLiu5LOFVwiWKFU_kg",
     "videoUrl": "https://www.youtube.com/embed/SIlfq9356lU?si=VOpAYqmIXBHNdeqm",
     "title": "Obliviate",
@@ -913,9 +913,9 @@
     "uploadDate": "12 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -923,9 +923,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -936,7 +936,7 @@
     "genre": "songs"
   },
   {
-    "_id": 19,
+    "id": 19,
     "thumbnailUrl": "https://i.ytimg.com/vi/VYUL1R4pupU/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGEEgTShlMA8=&rs=AOn4CLCA9UkFy333e_Nkz9dNI2lEsAG6kQ",
     "videoUrl": "https://www.youtube.com/embed/VYUL1R4pupU?si=KqpElpK8CWWNpfRX",
     "title": "Hamas leader Yahya Sinwar׳s exclusive interview on BBC",
@@ -945,9 +945,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -955,9 +955,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -968,7 +968,7 @@
     "genre": "comedy"
   },
   {
-    "_id": 20,
+    "id": 20,
     "thumbnailUrl": "https://i.ytimg.com/vi/F-UDrbMfqTs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBBgTwAQkleDT4SA97aPfh79PCK1w",
     "videoUrl": "https://www.youtube.com/embed/F-UDrbMfqTs?si=qH7dCQETZvWr0ly1",
     "title": "Harry Potter And The Goblet of Fire | Death Eaters at the World Cup | ClipZone: Villains & Heroes",
@@ -977,9 +977,9 @@
     "uploadDate": "12 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -987,9 +987,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -1000,7 +1000,7 @@
     "genre": "entertainment"
   },
   {
-    "_id": 21,
+    "id": 21,
     "thumbnailUrl": "https://i.ytimg.com/vi/rW_fwcmyIfk/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAQXjSS2SttMZHILPw964_jzfwHgw",
     "videoUrl": "https://www.youtube.com/embed/ke8b60x_IpQ?si=UnOPY2HzI7ZaW2bh",
     "title": "🇮🇳🥇 Neeraj Chopra wins historic gold for India | #Tokyo2020 Highlights",
@@ -1009,9 +1009,9 @@
     "uploadDate": "12 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -1019,9 +1019,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -1032,7 +1032,7 @@
     "genre": "sports"
   },
   {
-    "_id": 22,
+    "id": 22,
     "thumbnailUrl": "https://i.ytimg.com/vi/baLojo56L5M/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCIzG-vtSJcQ6y2LJ6ouQnaKRCgbw",
     "videoUrl": "https://www.youtube.com/embed/baLojo56L5M?si=2gJ7z-Fd3R4_emF_",
     "title": "Anti-Islamist Comedian DESTROYS Hamas",
@@ -1041,9 +1041,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -1051,9 +1051,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -1064,7 +1064,7 @@
     "genre": "comedy"
   },
   {
-    "_id": 23,
+    "id": 23,
     "thumbnailUrl": "https://i.ytimg.com/vi/xcLCe5iBvVc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDnxWQmOS4mehyG5GS-7gSs-I-lyw",
     "videoUrl": "https://www.youtube.com/embed/xcLCe5iBvVc?si=TpiXZDPunWdYMtBL",
     "title": "The Gospel According to Berkeley.",
@@ -1073,9 +1073,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -1083,9 +1083,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },
@@ -1096,7 +1096,7 @@
     "genre": "comedy"
   },
   {
-    "_id": 24,
+    "id": 24,
     "thumbnailUrl": "https://i.ytimg.com/vi/eNjcAgNu1Ac/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCHQJRoJegtHwyIvk7O0-35oHFKDw",
     "videoUrl": "https://www.youtube.com/embed/eNjcAgNu1Ac?si=lh_tvi6I3d-F_56L",
     "title": "Trump: We speak English here, not Spanish",
@@ -1105,9 +1105,9 @@
     "uploadDate": "1 years ago",
     "comments": [
       {
-        "_id": "comment01",
+        "id": "comment01",
         "user": {
-          "_id": "user02",
+          "id": "user02",
           "username": "WebDevMaster",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=WebDevMaster"
         },
@@ -1115,9 +1115,9 @@
         "createdAt": "2023-09-21T08:30:00Z"
       },
       {
-        "_id": "comment02",
+        "id": "comment02",
         "user": {
-          "_id": "user03",
+          "id": "user03",
           "username": "CodeNinja",
           "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=CodeNinja"
         },

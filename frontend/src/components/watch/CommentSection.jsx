@@ -1,8 +1,7 @@
 import React, {useState } from "react";
 import { useContext } from "react";
-import { commentContext } from "../../utils/context/commentsContext.js";
+import { commentContext } from "../../utils/context/commentsContext";
 import multiavatar from "@multiavatar/multiavatar/esm";
-
 
 const CommentSection = ({
   comments,
@@ -11,6 +10,7 @@ const CommentSection = ({
   onCommentsChanged,
   videoTitle,
 }) => {
+  //create random avatars
   const svgCode = (str) => {
     if (str) {
       return multiavatar(str);
@@ -59,9 +59,7 @@ const CommentSection = ({
 
   return (
     <div className="mt-8">
-      <h3 className="text-lg font-semibold mb-4">
-        {comments.length === 1 ? `1 Comment` : `${comments.length} Comments`}
-      </h3>
+      <h3 className="text-lg font-semibold mb-4">Comments</h3>
 
       {/* New Comment Input */}
       <div className="flex items-start space-x-4 mb-6">

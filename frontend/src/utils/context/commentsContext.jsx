@@ -20,11 +20,3 @@ export const commentContext = createContext({
     return res.data;
   },
 });
-
-export const CommentProvider = ({ children }) => {
-  return (
-    <commentContext.Provider value={commentContext._currentValue}>
-      {children}
-    </commentContext.Provider>
-  );
-};

@@ -1,44 +1,40 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-// import { useNavigate } from "react-router-dom";
 import FilterButtons from "./FilterButtons";
 import VideoThumbnail from "./VideoThumbnail";
-
-import videosData from "../utils/videosData.json";
-// const videos = videosData.videos;
+import { useVideos } from "../utils/context/videosContext";
 
 const HomePage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  // const navigate = useNavigate();
-  const [filteredVideos, setFilteredVideos] = useState(videosData.videos);
-  // const [searchedVideo, setSearchedVideo] = useState(videosData.videos);
+  const { videos, loading, error } = useVideos();
+  const [filteredVideos, setFilteredVideos] = useState([]);
+
+  React.useEffect(() => {
+    setFilteredVideos(videos);
+  }, [videos]);
 
   const handleSearch = (searchQuery) => {
-    // console.log(searchQuery);
-    // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
     const lowerQuery = searchQuery.toLowerCase();
-
-    if (searchQuery == "") {
-      setFilteredVideos(videosData.videos);
+    if (searchQuery === "") {
+      setFilteredVideos(videos);
+      return;
     }
-    const searchedVid = videosData.videos.filter((video) => {
+    const searchedVid = videos.filter((video) => {
       return (
         video.genre?.toLowerCase().includes(lowerQuery) ||
         video.title?.toLowerCase().includes(lowerQuery)
       );
     });
-    // console.log(searchedVid);
-    // setSearchedVideo(searchedVid);
     setFilteredVideos(searchedVid);
   };
 
   const handleFilterBtns = (filterId) => {
     if (filterId === "all") {
-      setFilteredVideos(videosData.videos);
+      setFilteredVideos(videos);
     } else {
-      const filteredOut = videosData.videos.filter((video) =>
-        video.genre.toLowerCase().includes(filterId.toLowerCase())
+      const filteredOut = videos.filter((video) =>
+        video.genre?.toLowerCase().includes(filterId.toLowerCase())
       );
       setFilteredVideos(filteredOut);
     }
@@ -47,6 +43,9 @@ const HomePage = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
+
+  if (loading) return <div>Loading videos...</div>;
+  if (error) return <div>Error loading videos: {error.message || error}</div>;
 
   return (
     <div className="flex flex-col h-screen bg-gray-50">

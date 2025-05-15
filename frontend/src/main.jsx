@@ -6,13 +6,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Login from "./components/user/Login";
 import Register from "./components/user/Register";
-import ChannelLayout from "./components/channel/ChannelLayout";
-import WatchVideo from "./components/watch/WatchVideo";
+import ChannelLayout from "./components/channel/ChannelPageLayout";
+// import WatchVideo from "./components/watch/WatchVideo";
 import NotFound from "./components/NotFound";
 import WatchPageLayout from "./components/watch/WatchPageLayout";
 import { UserProvider } from "./utils/context/userProvider";
 import { VideosProvider } from "./utils/context/videosProvider";
 import { CommentProvider } from "./utils/context/commentsProvider";
+import { AuthProvider } from "./utils/context/AuthProvider";
 
 const appRouter = createBrowserRouter([
   {
@@ -37,8 +38,14 @@ const appRouter = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <UserProvider>
-      <RouterProvider router={appRouter} />
-    </UserProvider>
+    <AuthProvider>
+      <UserProvider>
+        <VideosProvider>
+          <CommentProvider>
+            <RouterProvider router={appRouter} />
+          </CommentProvider>
+        </VideosProvider>
+      </UserProvider>
+    </AuthProvider>
   </StrictMode>
 );

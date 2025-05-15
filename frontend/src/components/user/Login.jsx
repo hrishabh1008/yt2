@@ -19,7 +19,7 @@ const Login = () => {
     };
     try {
       const response = await signinUser(userData);
-      console.log(response);
+      // console.log(response);
       if (response && response.data.token && response.data.user) {
         signIn(response.data.user, response.data.token); // updating userContext
         alert(`Signed in as ${email}`);
