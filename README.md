@@ -44,7 +44,7 @@ A full-stack YouTube-like video platform built with React (Vite), Node.js, and M
 
 ## 🎬 Demo Video
 
-Watch the demo video directly below:
+Watch the demo video is uploaded in the GitHub Repository:
 
 [▶️ Watch Demo Video](https://github.com/hrishabh1008/yt2/blob/main/YouTube%20Retro%20(compressed%20minimum%20)%20-%20Google%20Chrome%202025-05-15%2020-38-47%20(1).mp4?raw=true)
 
