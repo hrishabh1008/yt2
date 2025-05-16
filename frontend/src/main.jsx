@@ -13,7 +13,7 @@ import WatchPageLayout from "./components/watch/WatchPageLayout";
 import { UserProvider } from "./utils/context/userProvider";
 import { VideosProvider } from "./utils/context/videosProvider";
 import { CommentProvider } from "./utils/context/commentsProvider";
-import { AuthProvider } from "./utils/context/AuthProvider";
+// import { AuthProvider } from "./utils/context/AuthProvider";
 import ChannelPageLayout from './components/channel/ChannelPageLayout';
 
 const appRouter = createBrowserRouter([
@@ -36,7 +36,7 @@ const appRouter = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
+    {/* <AuthProvider> */}
       <UserProvider>
         <VideosProvider>
           <CommentProvider>
@@ -44,6 +44,6 @@ createRoot(document.getElementById("root")).render(
           </CommentProvider>
         </VideosProvider>
       </UserProvider>
-    </AuthProvider>
+    {/* </AuthProvider> */}
   </StrictMode>
 );
