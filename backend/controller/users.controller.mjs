@@ -55,7 +55,7 @@ export async function addUser(req, res) {
  * Controller function to handle user login
  */
 export async function loginUser(req, res) {
-  console.log(req);
+  // console.log(req);
   try {
     // Extracting user details from the request object (assumes middleware has set req.user after verifying the token)
     const user = {
