@@ -15,7 +15,7 @@ app.use(cors({ origin: "http://localhost:5173" }));
 const config = configDotenv();
 const atlasURI = config.parsed.MONGODB_ATLAS_URI;
 const PORT = config.parsed.PORT || 9999; // Default to 9999 if not set
-console.log(atlasURI, PORT);
+// console.log(atlasURI, PORT);
 //console .env
 
 const localDataBaseUri = "mongodb://localhost:27017/hrb-ytclone";
@@ -23,7 +23,7 @@ const localDataBaseUri = "mongodb://localhost:27017/hrb-ytclone";
 
 app.listen(PORT, () => {
   //starting server at port 9999
-  console.log(`***Server Connected => http://localhost:${PORT} ***`);
+  console.log(`*** Server Connected => http://localhost:${PORT} ***`);
 });
 
 app.use(json());
@@ -49,13 +49,22 @@ if (atlasURI) {
         err,
         "Trying to connect to local Database"
       );
+      mongoose
+        .connect(localDataBaseUri)
+        .then(() => {
+          //connecting to the mongoDb data base
+          console.log("Successfully connected to the MongoDB data base"); //consoling success
+        })
+        .catch((err) => {
+          console.log("Something Went Wrong - Data base not connected: ", err); //consoling error if error occurred
+        });
     });
 } else {
   mongoose
     .connect(localDataBaseUri)
     .then(() => {
       //connecting to the mongoDb data base
-      console.log("Successfully connected to the MongoDB data base"); //consoling success
+      console.log("Successfully connected to the MongoDB *local data base*"); //consoling success
     })
     .catch((err) => {
       console.log("Something Went Wrong - Data base not connected: ", err); //consoling error if error occurred
